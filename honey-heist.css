@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
 
 .sheet-honey-heist {
-  background: #0C366E url("https://i.ibb.co/MZF1Ghd/repeating.png");
+  background: #0C366E url("https://github.com/tysonmatanich/roll20-honey-heist/blob/main/images/repeating.png?raw=true");
   color: #fff;
   padding: 20px;
   font-family: "Indie Flower", cursive;
@@ -247,7 +247,7 @@
 
 .sheet-rolltemplate-Skill {
   position: relative;
-  background: #0C366E url("https://i.ibb.co/MZF1Ghd/repeating.png");
+  background: #0C366E url("https://github.com/tysonmatanich/roll20-honey-heist/blob/main/images/repeating.png?raw=true");
   color: #fff;
   text-align: center;
   max-width: 340px;
@@ -355,7 +355,7 @@
   z-index: -1;
   bottom: 10px;
   left: 10px;
-  background: url("https://i.ibb.co/f0hKpHK/bear-left.png");
+  background: url("https://github.com/tysonmatanich/roll20-honey-heist/blob/main/images/bear-left.png?raw=true");
   background-size: contain;
   width: 90px;
   height: 90px;
@@ -364,5 +364,5 @@
 .sheet-rolltemplate-Skill .sheet-criminal {
   left: auto;
   right: 10px;
-  background-image: url("https://i.ibb.co/rysDy1Q/criminal-right.png");
+  background-image: url("https://github.com/tysonmatanich/roll20-honey-heist/blob/main/images/criminal-right.png?raw=true");
 }
