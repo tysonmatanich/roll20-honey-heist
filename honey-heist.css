@@ -1,0 +1,368 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+
+.sheet-honey-heist {
+  background: #0C366E url("https://i.ibb.co/MZF1Ghd/repeating.png");
+  color: #fff;
+  padding: 20px;
+  font-family: "Indie Flower", cursive;
+  border-radius: 8px;
+  min-width: 370px;
+  box-sizing: border-box;
+}
+
+.sheet-info {
+  margin: 10px auto 20px;
+  max-width: 520px;
+}
+
+.sheet-info h1 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.sheet-inputs {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 -10px;
+}
+
+.sheet-inputs .sheet-input {
+  padding: 5px 10px;
+  box-sizing: border-box;
+}
+
+.sheet-inputs .sheet-input label {
+  font-family: "Indie Flower", cursive;
+  font-size: 13px;
+  line-height: 23px;
+  color: #fff;
+  opacity: 0.7;
+}
+
+.sheet-inputs .sheet-input input {
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: #254A7D;
+  color: #fff;
+  font-size: 15px;
+  line-height: normal;
+  padding: 4px 8px;
+  width: 250px;
+}
+
+.sheet-stats { 
+  max-width: 520px;
+  margin: 30px auto 20px;
+}
+
+.sheet-stats .sheet-stats-header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.sheet-stats .sheet-stats-header label {
+  font-family: "Indie Flower", cursive;
+  color: #fff;
+  font-size: 23px;
+}
+
+.sheet-stat-control {
+  overflow: hidden;
+  background: #fff linear-gradient(to bottom, #fff 0%, #ccc 100%);
+  border-radius: 2px;
+  margin: 10px 4px;
+  padding: 10px 0;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-between;
+  
+  box-shadow: 0 0 0 5px #08264D, 0 0 5px 5px #ffffff33;
+}
+
+.sheet-stat-control button {
+  border: none;
+  background-color: #08264D;
+  border-radius: 4px;
+  padding: 5px;
+  font-size: 20px;
+  width: 45px;
+  height: 36px;
+  box-sizing: border-box;
+  margin-left: 0;
+  margin-right: 20px;
+  border-radius: 0px 18px 18px 0px;
+  
+  border: 1px dashed #ffffffbb;
+  border-left-width: 0;
+  box-shadow: -4px 0 0 0 #08264D, 0 0 50px 4px #000;
+}
+
+.sheet-stat-control button:hover {
+  border-color: #fff;
+}
+
+.sheet-stat-control button ~ button {
+  border-radius: 18px 0px 0px 18px;
+  margin-left: 20px;
+  margin-right: 0;
+  
+  border-left-width: 1px;
+  border-right-width: 0;
+  box-shadow: 4px 0 0 0 #08264D, 0 0 50px 4px #000;
+}
+
+.sheet-stat-control input {
+  width: 30px;
+  text-align: center;
+}
+
+.sheet-stat-control .sheet-stat-bear,
+.sheet-stat-control .sheet-stat-criminal{
+  width: 40px;
+  height: 40px;
+  display: none;
+}
+
+.sheet-stat-control input[name="attr_bear"][value="1"] ~ .sheet-stat-bear:nth-of-type(-n+1) {
+  display: inline;
+}
+
+.sheet-stat-control input[name="attr_bear"][value="2"] ~ .sheet-stat-bear:nth-of-type(-n+2) {
+  display: inline;
+}
+
+.sheet-stat-control input[name="attr_bear"][value="3"] ~ .sheet-stat-bear:nth-of-type(-n+3) {
+  display: inline;
+}
+
+.sheet-stat-control input[name="attr_bear"][value="4"] ~ .sheet-stat-bear:nth-of-type(-n+4) {
+  display: inline;
+}
+
+.sheet-stat-control input[name="attr_bear"][value="5"] ~ .sheet-stat-bear:nth-of-type(-n+5) {
+  display: inline;
+}
+
+.sheet-stat-control input[name="attr_bear"][value="6"] ~ .sheet-stat-bear:nth-of-type(-n+6) {
+  display: inline;
+}
+
+.sheet-stat-control input[name="attr_criminal"][value="1"] ~ .sheet-stat-criminal:nth-of-type(n+12) {
+  display: inline;
+}
+
+.sheet-stat-control input[name="attr_criminal"][value="2"] ~ .sheet-stat-criminal:nth-of-type(n+11) {
+  display: inline;
+}
+
+.sheet-stat-control input[name="attr_criminal"][value="3"] ~ .sheet-stat-criminal:nth-of-type(n+10) {
+  display: inline;
+}
+
+.sheet-stat-control input[name="attr_criminal"][value="4"] ~ .sheet-stat-criminal:nth-of-type(n+9) {
+  display: inline;
+}
+
+.sheet-stat-control input[name="attr_criminal"][value="5"] ~ .sheet-stat-criminal:nth-of-type(n+8) {
+  display: inline;
+}
+
+.sheet-stat-control input[name="attr_criminal"][value="6"] ~ .sheet-stat-criminal:nth-of-type(n+7) {
+  display: inline;
+}
+
+.sheet-roll-container  {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+
+.sheet-roll-container .sheet-roll-group  {
+  display: flex;
+  flex-flow: column;
+}
+
+.sheet-roll-container button[type="roll"].sheet-roll {
+  padding: 8px;
+  padding-right: 12px;
+  background-color: #08264D;
+  border: 1px #ffffff66 dashed;
+  color: #fff;
+  background-image: none;
+  border-radius: 4px;
+  margin: 6px 0;
+  text-align: center;
+  min-width: 160px;
+  box-sizing: border-box;
+}
+
+.sheet-roll-container button[type="roll"].sheet-roll.sheet-roll-special {
+  background-color: #254A7D;
+}
+
+.sheet-roll-container button[type="roll"].sheet-roll:hover {
+  border-color: #ffffffaa;
+}
+
+.sheet-roll-container button[type="roll"].sheet-roll:before {
+  vertical-align: top;
+  margin-right: 2px;
+  opacity: 0.7;
+}
+
+.sheet-rules {
+  max-width: 520px;
+  margin: 20px auto;
+}
+
+.sheet-rules h2,
+.sheet-rules h3 {
+  font-size: 15px;
+  font-family: "Indie Flower", cursive;
+  color: #fff;
+  font-weight: bold;
+}
+
+.sheet-rules p {
+  font-size: 14px;
+  font-family: "Indie Flower", cursive;
+}
+
+.sheet-rules h2 a {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.sheet-rules h2 a:before {
+  content: "+ ";
+  display: inline-block;
+  padding: 0 3px 0 8px;
+}
+
+.sheet-rules a {
+  color: #68A9FF;
+}
+
+.sheet-rolltemplate-Skill {
+  position: relative;
+  background: #0C366E url("https://i.ibb.co/MZF1Ghd/repeating.png");
+  color: #fff;
+  text-align: center;
+  max-width: 340px;
+  border-radius: 4px;
+  font-family: cursive;
+  box-shadow: inset 0 0 0 9px #08264D;
+}
+
+.sheet-rolltemplate-Skill:after {
+  content: "";
+  top: 8px;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+  position: absolute;
+  border: 2px solid #fff;
+  border-radius: 2px;
+}
+
+.sheet-rolltemplate-Skill:before {
+  content: "";
+  top: 8px;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+  position: absolute;
+  background: linear-gradient(to bottom, #254A7D 0%, #0C366E00 100%);
+}
+
+.sheet-rolltemplate-Skill .sheet-result-container {
+  position: relative;
+  z-index: 1;
+  padding: 10px;
+  font-family: "Indie Flower", cursive;
+}
+
+.sheet-rolltemplate-Skill .sheet-result {
+  font-size: 40px;
+  line-height: normal;
+  font-weight: normal;
+  margin: 16px 0 0;
+}
+
+.sheet-rolltemplate-Skill .sheet-action-type {
+  font-size: 18px;
+  line-height: normal;
+  font-weight: normal;
+}
+
+.sheet-rolltemplate-Skill .sheet-character {
+  font-size: 13px;
+  line-height: normal;
+  font-weight: normal;
+}
+
+.sheet-rolltemplate-Skill .sheet-values {
+  font-family: cursive;
+  margin: 10px 0;
+}
+
+.sheet-rolltemplate-Skill .sheet-compare-symbol {
+  display: inline-block;
+  font-size: 18px;
+  line-height: normal;
+  margin: 0 6px;
+  font-family: "Indie Flower", cursive;
+}
+
+.sheet-rolltemplate-Skill .inlinerollresult,
+.sheet-rolltemplate-Skill .sheet-player-stat{
+  display: inline-block;
+  text-align: center;
+  background-color: #365e95;
+  border: 2px solid #365e95;
+  color: #fff;
+  border-radius: 2px;
+  font-size: 1.1em;
+  padding: 0 3px;
+  font-weight: bold;
+  min-width: 20px;
+  box-sizing: border-box;
+}
+
+.sheet-rolltemplate-Skill .sheet-success + .sheet-value-result .inlinerollresult {
+  border: 2px solid #0C9D20;
+  background: #0C9D20;
+}
+
+.sheet-rolltemplate-Skill .sheet-fail + .sheet-value-result .inlinerollresult {
+  border: 2px solid #CC2E2E;
+  background: #CC2E2E;
+}
+
+.sheet-rolltemplate-Skill .sheet-value-result .inlinerollresult.fullcrit {
+  border-color: #CC2E2E;
+}
+
+.sheet-rolltemplate-Skill .sheet-value-result .inlinerollresult.fullfail {
+  border-color: #0C9D20;
+}
+
+.sheet-rolltemplate-Skill .sheet-bear,
+.sheet-rolltemplate-Skill .sheet-criminal{
+  position: absolute;
+  z-index: -1;
+  bottom: 10px;
+  left: 10px;
+  background: url("https://i.ibb.co/f0hKpHK/bear-left.png");
+  background-size: contain;
+  width: 90px;
+  height: 90px;
+}
+
+.sheet-rolltemplate-Skill .sheet-criminal {
+  left: auto;
+  right: 10px;
+  background-image: url("https://i.ibb.co/rysDy1Q/criminal-right.png");
+}
