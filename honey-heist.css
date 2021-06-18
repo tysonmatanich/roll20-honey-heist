@@ -43,6 +43,7 @@
   line-height: 23px;
   color: #fff;
   opacity: 0.7;
+  text-transform: lowercase;
 }
 
 .sheet-inputs .sheet-input input,
@@ -238,6 +239,7 @@
   text-align: center;
   min-width: 160px;
   box-sizing: border-box;
+  text-transform: lowercase;
 }
 
 .sheet-roll-container button[type="roll"].sheet-roll.sheet-roll-special {
@@ -397,7 +399,7 @@
   z-index: -1;
   bottom: 10px;
   left: 10px;
-  background: url("https://github.com/tysonmatanich/roll20-honey-heist/blob/main/images/bear-left.png?raw=true");
+  background-image: url("https://github.com/tysonmatanich/roll20-honey-heist/blob/main/images/bear-left.png?raw=true");
   background-size: contain;
   width: 90px;
   height: 90px;
