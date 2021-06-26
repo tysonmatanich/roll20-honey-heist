@@ -45,78 +45,100 @@
         <div class="sheet-stats-header">
             <label><span name="attr_character_type_primary">Bear</span></label>
             <label><span name="attr_character_type_secondary">Criminal</span></label>
+
             <input type="hidden" name="attr_modify_type_primary" value="Frustration" />
-            <label><span name="attr_modify_type_primary">Frustration</span></label>
             <input type="hidden" name="attr_modify_type_secondary" value="Greed" />
-            <label><span name="attr_modify_type_secondary">Greed</span></label>
         </div>
         <div class="sheet-stat-control">
-            <button class="sheet-frustration" type="action" name="act_frustration" title="@{modify_type_primary} (+1 @{bear})">+</button>
+            <button class="sheet-frustration" type="action" name="act_frustration" title="%{modify_type_primary} (+1 %{character_type_primary})">+</button>
             
             <input type="hidden" name="attr_is_primary_bear" value="1" />
             <input type="hidden" name="attr_bear" value="3" />
-            <img class="sheet-stat-bear" src="https://github.com/tysonmatanich/roll20-honey-heist/blob/main/images/bear.png?raw=true" alt="@{bear}" />
-            <img class="sheet-stat-bear" src="https://github.com/tysonmatanich/roll20-honey-heist/blob/main/images/bear.png?raw=true" alt="@{bear}" />
-            <img class="sheet-stat-bear" src="https://github.com/tysonmatanich/roll20-honey-heist/blob/main/images/bear.png?raw=true" alt="@{bear}" />
-            <img class="sheet-stat-bear" src="https://github.com/tysonmatanich/roll20-honey-heist/blob/main/images/bear.png?raw=true" alt="@{bear}" />
-            <img class="sheet-stat-bear" src="https://github.com/tysonmatanich/roll20-honey-heist/blob/main/images/bear.png?raw=true" alt="@{bear}" />
-            <img class="sheet-stat-bear" src="https://github.com/tysonmatanich/roll20-honey-heist/blob/main/images/bear.png?raw=true" alt="@{bear}" />
+            <img class="sheet-stat-bear" src="https://github.com/tysonmatanich/roll20-honey-heist/blob/main/images/bear.png?raw=true" name="attr_modify_type_primary" alt="@{character_type_primary}" />
+            <img class="sheet-stat-bear" src="https://github.com/tysonmatanich/roll20-honey-heist/blob/main/images/bear.png?raw=true" name="attr_modify_type_primary" alt="@{character_type_primary}" />
+            <img class="sheet-stat-bear" src="https://github.com/tysonmatanich/roll20-honey-heist/blob/main/images/bear.png?raw=true" name="attr_modify_type_primary" alt="@{character_type_primary}" />
+            <img class="sheet-stat-bear" src="https://github.com/tysonmatanich/roll20-honey-heist/blob/main/images/bear.png?raw=true" name="attr_modify_type_primary" alt="@{character_type_primary}" />
+            <img class="sheet-stat-bear" src="https://github.com/tysonmatanich/roll20-honey-heist/blob/main/images/bear.png?raw=true" name="attr_modify_type_primary" alt="@{character_type_primary}" />
+            <img class="sheet-stat-bear" src="https://github.com/tysonmatanich/roll20-honey-heist/blob/main/images/bear.png?raw=true" name="attr_modify_type_primary" alt="@{character_type_primary}" />
             
             <input type="hidden" name="attr_criminal" value="3" />
-            <img class="sheet-stat-criminal" src="https://github.com/tysonmatanich/roll20-honey-heist/blob/main/images/criminal.png?raw=true" alt="@{criminal}" />
-            <img class="sheet-stat-criminal" src="https://github.com/tysonmatanich/roll20-honey-heist/blob/main/images/criminal.png?raw=true" alt="@{criminal}" />
-            <img class="sheet-stat-criminal" src="https://github.com/tysonmatanich/roll20-honey-heist/blob/main/images/criminal.png?raw=true" alt="@{criminal}" />
-            <img class="sheet-stat-criminal" src="https://github.com/tysonmatanich/roll20-honey-heist/blob/main/images/criminal.png?raw=true" alt="@{criminal}" />
-            <img class="sheet-stat-criminal" src="https://github.com/tysonmatanich/roll20-honey-heist/blob/main/images/criminal.png?raw=true" alt="@{criminal}" />
-            <img class="sheet-stat-criminal" src="https://github.com/tysonmatanich/roll20-honey-heist/blob/main/images/criminal.png?raw=true" alt="@{criminal}" />
+            <img class="sheet-stat-criminal" src="https://github.com/tysonmatanich/roll20-honey-heist/blob/main/images/criminal.png?raw=true" name="attr_character_type_secondary" alt="@{character_type_secondary}" />
+            <img class="sheet-stat-criminal" src="https://github.com/tysonmatanich/roll20-honey-heist/blob/main/images/criminal.png?raw=true" name="attr_character_type_secondary" alt="@{character_type_secondary}" />
+            <img class="sheet-stat-criminal" src="https://github.com/tysonmatanich/roll20-honey-heist/blob/main/images/criminal.png?raw=true" name="attr_character_type_secondary" alt="@{character_type_secondary}" />
+            <img class="sheet-stat-criminal" src="https://github.com/tysonmatanich/roll20-honey-heist/blob/main/images/criminal.png?raw=true" name="attr_character_type_secondary" alt="@{character_type_secondary}" />
+            <img class="sheet-stat-criminal" src="https://github.com/tysonmatanich/roll20-honey-heist/blob/main/images/criminal.png?raw=true" name="attr_character_type_secondary" alt="@{character_type_secondary}" />
+            <img class="sheet-stat-criminal" src="https://github.com/tysonmatanich/roll20-honey-heist/blob/main/images/criminal.png?raw=true" name="attr_character_type_secondary" alt="@{character_type_secondary}" />
 
-            <button class="sheet-greed" type="action" name="act_greed" title="@{modify_type_secondary} (+1 @{criminal})">+</button>
+            <button class="sheet-greed" type="action" name="act_greed" title="%{modify_type_secondary} (+1 %{criminal})">+</button>
         </div>
         <div class="sheet-roll-container">
             <div class="sheet-roll-group">
-                <button type="roll" class="sheet-roll" title="Roll @{bear} (1d6)" name="roll-bear"
+                <button type="roll" class="sheet-roll" title="Roll %{bear} (1d6)" name="roll_bear"
                     value="&{template:Skill} {{characterName=@{character_name}}} {{characterType=@{character_type_primary}}} {{isPrimary=[[1]]}} {{isPrimaryBear=[[@{is_primary_bear}]]}} {{diceRoll=[[1d6]]}} {{playerStat=[[@{bear}]]}}">
                     <span name="attr_character_type_primary">Bear</span>
                 </button>
-                <button type="roll" class="sheet-roll sheet-roll-special" title="Roll Special @{bear} (2d6)" name="roll-bear-skilled"
+                <button type="roll" class="sheet-roll sheet-roll-special" title="Roll Special %{bear} (2d6)" name="roll_bear_skilled"
                     value="&{template:Skill} {{characterName=@{character_name}}} {{characterType=@{character_type_primary}}} {{isPrimary=[[1]]}} {{isPrimaryBear=[[@{is_primary_bear}]]}} {{special=Special}} {{diceRoll=[[2d6kl1]]}} {{playerStat=[[@{bear}]]}}">
                     <span name="attr_character_type_primary">Bear</span> special
                 </button>
             </div>
             <div class="sheet-roll-group">
-                <button type="roll" class="sheet-roll" title="Roll @{criminal} (1d6)" name="roll-criminal"
+                <button type="roll" class="sheet-roll" title="Roll %{criminal} (1d6)" name="roll_criminal"
                     value="&{template:Skill} {{characterName=@{character_name}}} {{characterType=@{character_type_secondary}}} {{isSecondary=[[1]]}} {{isPrimaryBear=[[@{is_primary_bear}]]}} {{diceRoll=[[1d6]]}} {{playerStat=[[@{criminal}]]}}">
                     <span name="attr_character_type_secondary">Criminal</span>
                 </button>
-                <button type="roll" class="sheet-roll sheet-roll-special" title="Roll Special @{criminal} (2d6)" name="roll-criminal-skilled"
+                <button type="roll" class="sheet-roll sheet-roll-special" title="Roll Special %{criminal} (2d6)" name="roll_criminal_skilled"
                     value="&{template:Skill} {{characterName=@{character_name}}} {{characterType=@{character_type_secondary}}} {{isSecondary=[[1]]}} {{isPrimaryBear=[[@{is_primary_bear}]]}} {{special=Special}} {{diceRoll=[[2d6kl1]]}} {{playerStat=[[@{criminal}]]}}">
                     <span name="attr_character_type_secondary">Criminal</span> special
                 </button>
             </div>
         </div>
+
+        <a href="#popup_rules">View Rules Summary</a>
+
+        <br/><br/><br/>
+        <button type="action" name="act_test_1" title="@{character_type_primary}">1</button>
+        <button type="action" name="act_test_2" title="%{character_type_primary}">2</button>
+        <button type="action" name="act_test_3" title="@{character_type_primary} @{character_type_secondary}">3</button>
+        <button type="action" name="act_test_4" title="%{character_type_primary} %{character_type_secondary}">4</button>
+        <button type="action" name="act_test_5" title="@{character_type_primary} and @{character_type_secondary}">5</button>
+        <button type="action" name="act_test_6" title="%{character_type_primary} and %{character_type_secondary}">6</button>
+        <button type="action" name="act_test_7" title="this @{character_type_primary} and @{character_type_secondary}">7</button>
+        <button type="action" name="act_test_8" title="this %{character_type_primary} and %{character_type_secondary}">8</button>
+        <button type="action" name="act_test_9" title="@{is_primary_bear}">9</button>
+        <button type="action" name="act_test_10" title="#{is_primary_bear}">10</button>
+        <button type="action" name="act_test_11" title="@{bear}">11</button>
+        <button type="action" name="act_test_12" title="#{bear}">12</button>
     </div>
 
-    <div class="sheet-rules">
-        <h2>
-            Rules Summary
-            <a href="https://docs.google.com/viewer?url=https://github.com/tysonmatanich/roll20-honey-heist/blob/main/honey-heist.pdf?raw=true">view full rules</a>
-        </h2>
-        <p>You’re not a talking bear, per se, but you can sort of mangle human speech through your bear mouth, maybe?</p>
-        <h3>Stats</h3>
-        <p>You have two stats. Each starts with 3 points.</p>
-        <p><strong>Bear:</strong> Use to maul stuff, run & climb, shrug off damage, scare people, and generally do bear stuff.</p>
-        <p><strong>Criminal:</strong> Use to do anything not directly related to being a bear.</p>
-        <h3>Actions</h3>
-        <p>When you act, and the outcome is in doubt, roll a D6. If it’s equal to or under the relevant stat, you succeed. If it’s over the stat, you fail. If you’re using your bear special-skill or doing something related to your role, roll 2 D6 and pick the lowest.</p>
-        <h3>Changing Stats</h3>
-        <p><strong>Frustration:</strong> When the plan fails and you run into difficulty, move one point from Criminal into Bear.</p>
-        <p><strong>Greed:</strong> When the plan goes off without a hitch, move one point from Bear into Criminal.</p>
-        <p>You can voluntarily move one point from Bear to Criminal by doing a flashback scene in which you and the other bears plan out the heist over coffee and cigarettes in the back room of a seedy bar. You can voluntarily move one point of Criminal into Bear by eating a load of honey.</p>
-        <h3> The End</h3>
-        <p>If your criminal stat ever reaches 6, you are lured into a life of crime and betray the party.</p>
-        <p>If your bear stat ever reaches 6, you flip out bear-style and lose it. Presumable to be picked up by animal control in half an hour or so.</p>
-        <br/>
-        <p>Credits: Honey Heist by <a href="https://twitter.com/gshowitt">Grant Howitt</a>, Roll20 template by <a href="https://www.matanich.com/about/">Tyson Matanich</a>, view on <a href="https://github.com/tysonmatanich/roll20-honey-heist/">GitHub</a>.</p>
+    <div id="popup_rules" class="sheet-overlay">
+        <a class="sheet-overlay-background" href="#" title="Close Popup"></a>
+        <div class="sheet-popup sheet-rules">
+            <header>
+                <h2>
+                    Rules Summary
+                </h2>
+                <a class="sheet-overlay-close" href="#" title="Close Popup">×</a>
+            </header>
+            <div class="sheet-overlay-content">
+                <p>You’re not a talking bear, per se, but you can sort of mangle human speech through your bear mouth, maybe?</p>
+                <h3>Stats</h3>
+                <p>You have two stats. Each starts with 3 points.</p>
+                <p><strong>Bear:</strong> Use to maul stuff, run & climb, shrug off damage, scare people, and generally do bear stuff.</p>
+                <p><strong>Criminal:</strong> Use to do anything not directly related to being a bear.</p>
+                <h3>Actions</h3>
+                <p>When you act, and the outcome is in doubt, roll a D6. If it’s equal to or under the relevant stat, you succeed. If it’s over the stat, you fail. If you’re using your bear special-skill or doing something related to your role, roll 2 D6 and pick the lowest.</p>
+                <h3>Changing Stats</h3>
+                <p><strong>Frustration:</strong> When the plan fails and you run into difficulty, move one point from Criminal into Bear.</p>
+                <p><strong>Greed:</strong> When the plan goes off without a hitch, move one point from Bear into Criminal.</p>
+                <p>You can voluntarily move one point from Bear to Criminal by doing a flashback scene in which you and the other bears plan out the heist over coffee and cigarettes in the back room of a seedy bar. You can voluntarily move one point of Criminal into Bear by eating a load of honey.</p>
+                <h3> The End</h3>
+                <p>If your criminal stat ever reaches 6, you are lured into a life of crime and betray the party.</p>
+                <p>If your bear stat ever reaches 6, you flip out bear-style and lose it. Presumable to be picked up by animal control in half an hour or so.</p>
+                <br/>
+                <p><strong>Credits:</strong> Honey Heist by Grant Howitt, Roll20 template by Tyson Matanich, view it on GitHub at https://github.com/tysonmatanich/roll20-honey-heist/</p>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -149,7 +171,7 @@
                 }
             }
         
-            setattrs({
+            setAttrs({
                 bear: bear,
                 criminal: criminal,
             });
@@ -159,12 +181,12 @@
     const updateisPrimaryBear = function () {
         getAttrs(["character_type_primary"], function (values) {
             if (values.character_type_primary && values.character_type_primary.trim().toLowerCase() === "bear") {
-                setattrs({
+                setAttrs({
                     is_primary_bear: 1
                 });
             }
             else {
-                setattrs({
+                setAttrs({
                     is_primary_bear: 0
                 });
             }
@@ -173,7 +195,7 @@
     
     on("sheet:opened", function () {
         if (isValidPlayerStats(parseInt(values.bear), parseInt(values.criminal))) {
-            setattrs({
+            setAttrs({
                 bear: 3,
                 criminal: 3,
             });
@@ -208,19 +230,19 @@
         <div class="sheet-character">by {{characterName}}</div>
 
         <div class="sheet-values">
-            {{#diceRoll}}
-                {{#^rollGreater() diceRoll playerStat}}
-                    <div class="sheet-success"></div>
-                {{/^rollGreater() diceRoll playerStat}}
-                {{#rollGreater() diceRoll playerStat}}
-                    <div class="sheet-fail"></div>
-                {{/rollGreater() diceRoll playerStat}}
-                <div class="sheet-value-result">
-                    {{diceRoll}}
-                    <span class="sheet-compare-symbol">≤</span>
-                    <span class="sheet-player-stat">{{playerStat}}</span>
-                </div>
-            {{/diceRoll}}
+            {{#^rollGreater() diceRoll playerStat}}
+                <div class="sheet-success"></div>
+            {{/^rollGreater() diceRoll playerStat}}
+            {{#rollGreater() diceRoll playerStat}}
+                <div class="sheet-fail"></div>
+            {{/rollGreater() diceRoll playerStat}}
+            <div class="sheet-value-result">
+                {{diceRoll}}
+                <span class="sheet-compare-symbol">≤</span>
+                <span class="sheet-player-stat">
+                    {{playerStat}}
+                </span>
+            </div>
         </div>
 
         {{#rollTotal() isPrimaryBear 1}}

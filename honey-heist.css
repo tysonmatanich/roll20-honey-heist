@@ -10,6 +10,15 @@
   box-sizing: border-box;
 }
 
+.sheet-honey-heist a {
+  color: #68A9FF;
+}
+
+.sheet-honey-heist a:hover {
+  color: #68A9FF;
+  text-decoration: underline;
+}
+
 .sheet-info {
   margin: 10px auto 20px;
   max-width: 520px;
@@ -95,12 +104,12 @@
 
 .sheet-stats { 
   max-width: 520px;
-  margin: 30px auto 20px;
+  margin: 30px auto 0;
 }
 
 .sheet-stats .sheet-stats-header {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row;
   justify-content: space-between;
 }
 
@@ -108,6 +117,11 @@
   font-family: "Indie Flower", cursive;
   color: #fff;
   font-size: 23px;
+}
+
+.sheet-stats .sheet-stats-header label + label {
+  text-align: right;
+  padding-right: 0;
 }
 
 .sheet-stat-control {
@@ -220,6 +234,7 @@
   display: flex;
   flex-flow: row;
   justify-content: space-between;
+  margin-bottom: 30px;
 }
 
 .sheet-roll-container .sheet-roll-group  {
@@ -256,17 +271,105 @@
   opacity: 0.7;
 }
 
-.sheet-rules {
-  max-width: 520px;
-  margin: 20px auto;
+.sheet-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: opacity 500ms;
+  display: flex;
+  align-items: flex-start;
+  padding: 20px;
+  padding-right: 26px;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.sheet-overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.sheet-overlay-background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.sheet-popup {
+  margin: 0 auto;
+  background: #0C366E;
+  border-radius: 6px;
+  max-width: 540px;
+  position: relative;
+  flex-shrink: 1;
+  flex-grow: 0;
+  max-height: calc(100vh - 40px);
+  display: flex;
+  flex-direction: column;
+  padding: 4px;
+}
+
+.sheet-popup > header {
+  position: relative;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.sheet-popup .sheet-overlay-close {
+  font-size: 24px;
+  padding: 10px;
+  font-family: "Indie Flower", cursive;
+  color: #fff;
+  font-weight: bold;
+}
+
+.sheet-popup .sheet-overlay-close:hover {
+  text-decoration: none;
+  color: #68A9FF;
+}
+
+.sheet-overlay-content {
+  padding: 10px;
+  max-height: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+
+  scrollbar-color: #08264D #516e97;
+  scrollbar-width: thin;
+}
+
+.sheet-overlay-content::-webkit-scrollbar {
+  width: 10px;
+  cursor:pointer;
+}
+.sheet-overlay-content::-webkit-scrollbar-track {
+  background: #516e97;
+  border-radius: 4px;
+}
+.sheet-overlay-content::-webkit-scrollbar-thumb {
+  background-color: #08264D;
+  border-radius: 4px;
+  border: 1px solid #516e97;
 }
 
 .sheet-rules h2,
 .sheet-rules h3 {
-  font-size: 15px;
+  font-size: 18px;
   font-family: "Indie Flower", cursive;
   color: #fff;
   font-weight: bold;
+}
+
+.sheet-rules h3 {
+  font-size: 15px;
 }
 
 .sheet-rules p {
@@ -274,19 +377,10 @@
   font-family: "Indie Flower", cursive;
 }
 
-.sheet-rules h2 a {
-  font-size: 14px;
-  font-weight: normal;
-}
-
 .sheet-rules h2 a:before {
   content: "+ ";
   display: inline-block;
   padding: 0 3px 0 8px;
-}
-
-.sheet-rules a {
-  color: #68A9FF;
 }
 
 .sheet-rolltemplate-Skill {
@@ -360,8 +454,7 @@
   font-family: "Indie Flower", cursive;
 }
 
-.sheet-rolltemplate-Skill .inlinerollresult,
-.sheet-rolltemplate-Skill .sheet-player-stat{
+.sheet-rolltemplate-Skill .inlinerollresult {
   display: inline-block;
   text-align: center;
   background-color: #365e95;
@@ -375,21 +468,21 @@
   box-sizing: border-box;
 }
 
-.sheet-rolltemplate-Skill .sheet-success + .sheet-value-result .inlinerollresult {
+.sheet-rolltemplate-Skill .sheet-success + .sheet-value-result > .inlinerollresult {
   border: 2px solid #0C9D20;
   background: #0C9D20;
 }
 
-.sheet-rolltemplate-Skill .sheet-fail + .sheet-value-result .inlinerollresult {
+.sheet-rolltemplate-Skill .sheet-fail + .sheet-value-result > .inlinerollresult {
   border: 2px solid #CC2E2E;
   background: #CC2E2E;
 }
 
-.sheet-rolltemplate-Skill .sheet-value-result .inlinerollresult.fullcrit {
+.sheet-rolltemplate-Skill .sheet-value-result > .inlinerollresult.fullcrit {
   border-color: #CC2E2E;
 }
 
-.sheet-rolltemplate-Skill .sheet-value-result .inlinerollresult.fullfail {
+.sheet-rolltemplate-Skill .sheet-value-result > .inlinerollresult.fullfail {
   border-color: #0C9D20;
 }
 
