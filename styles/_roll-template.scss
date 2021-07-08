@@ -3,7 +3,7 @@
 .sheet-rolltemplate-Skill {
   position: relative;
   background: $color-background
-    url("https://github.com/tysonmatanich/roll20-honey-heist/blob/main/assets/images/repeating.png?raw=true");
+    url("https://github.com/tysonmatanich/roll20-honey-heist/blob/custom/assets/images/repeating.png?raw=true");
   color: $color-foreground;
   text-align: center;
   max-width: 340px;
@@ -115,7 +115,7 @@
     z-index: -1;
     bottom: 10px;
     left: 10px;
-    background-image: url("https://github.com/tysonmatanich/roll20-honey-heist/blob/main/assets/images/bear-left.png?raw=true");
+    background-image: url("https://github.com/tysonmatanich/roll20-honey-heist/blob/custom/assets/images/bear-left.png?raw=true");
     background-size: contain;
     width: 90px;
     height: 90px;
@@ -124,6 +124,6 @@
   .sheet-secondary {
     left: auto;
     right: 10px;
-    background-image: url("https://github.com/tysonmatanich/roll20-honey-heist/blob/main/assets/images/criminal-right.png?raw=true");
+    background-image: url("https://github.com/tysonmatanich/roll20-honey-heist/blob/custom/assets/images/criminal-right.png?raw=true");
   }
 }
