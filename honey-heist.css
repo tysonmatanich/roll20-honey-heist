@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
-
 .sheet-honey-heist {
-  background: #0C366E url("https://github.com/tysonmatanich/roll20-honey-heist/blob/main/images/repeating.png?raw=true");
+  background: #0c366e url("https://github.com/tysonmatanich/roll20-honey-heist/blob/main/assets/images/repeating.png?raw=true");
   color: #fff;
   padding: 20px;
   font-family: "Indie Flower", cursive;
@@ -9,13 +8,11 @@
   min-width: 370px;
   box-sizing: border-box;
 }
-
 .sheet-honey-heist a {
-  color: #68A9FF;
+  color: #68a9ff;
 }
-
 .sheet-honey-heist a:hover {
-  color: #68A9FF;
+  color: #68a9ff;
   text-decoration: underline;
 }
 
@@ -23,7 +20,6 @@
   margin: 10px auto 20px;
   max-width: 520px;
 }
-
 .sheet-info h1 {
   color: #fff;
   margin-bottom: 10px;
@@ -34,18 +30,15 @@
   flex-flow: row wrap;
   margin: 0 -10px;
 }
-
 .sheet-inputs .sheet-input {
   padding: 5px 10px;
   box-sizing: border-box;
 }
-
 .sheet-inputs .sheet-input.sheet-input-full {
   padding: 5px 10px;
   box-sizing: border-box;
   width: 100%;
 }
-
 .sheet-inputs .sheet-input label {
   font-family: "Indie Flower", cursive;
   font-size: 13px;
@@ -54,19 +47,17 @@
   opacity: 0.7;
   text-transform: lowercase;
 }
-
 .sheet-inputs .sheet-input input,
 .sheet-inputs .sheet-input textarea {
   border: 1px solid transparent;
   border-radius: 4px;
-  background-color: #254A7D;
+  background-color: #254a7d;
   color: #fff;
   font-size: 15px;
   line-height: normal;
   padding: 4px 8px;
   width: 250px;
 }
-
 .sheet-inputs .sheet-input textarea {
   min-width: 100%;
   max-width: 100%;
@@ -74,21 +65,19 @@
   height: 5.5em;
   box-sizing: border-box;
   cursor: auto;
-  
-  scrollbar-color: #08264D #516e97;
+  scrollbar-color: #08264d #516e97;
   scrollbar-width: thin;
 }
-
 .sheet-inputs .sheet-input textarea::-webkit-scrollbar {
   width: 10px;
-  cursor:pointer;
+  cursor: pointer;
 }
 .sheet-inputs .sheet-input textarea::-webkit-scrollbar-track {
   background: #516e97;
   border-radius: 4px;
 }
 .sheet-inputs .sheet-input textarea::-webkit-scrollbar-thumb {
-  background-color: #08264D;
+  background-color: #08264d;
   border-radius: 4px;
   border: 1px solid #516e97;
 }
@@ -98,27 +87,24 @@
 }
 .sheet-inputs .sheet-input textarea::-webkit-resizer {
   background: transparent;
-  border-top: 10px solid #254A7D;
+  border-top: 10px solid #254a7d;
   border-right: 10px solid transparent;
 }
 
-.sheet-stats { 
+.sheet-stats {
   max-width: 520px;
   margin: 30px auto 0;
 }
-
 .sheet-stats .sheet-stats-header {
   display: flex;
   flex-flow: row;
   justify-content: space-between;
 }
-
 .sheet-stats .sheet-stats-header label {
   font-family: "Indie Flower", cursive;
   color: #fff;
   font-size: 23px;
 }
-
 .sheet-stats .sheet-stats-header label + label {
   text-align: right;
   padding-right: 0;
@@ -126,7 +112,7 @@
 
 .sheet-stat-control {
   overflow: hidden;
-  background: #fff linear-gradient(to bottom, #fff 0%, #ccc 100%);
+  background: #fff linear-gradient(to bottom, #fff 0%, #cccccc #ccc 100%);
   border-radius: 2px;
   margin: 10px 4px;
   padding: 10px 0;
@@ -134,13 +120,11 @@
   flex-flow: row;
   align-items: center;
   justify-content: space-between;
-  
-  box-shadow: 0 0 0 5px #08264D, 0 0 5px 5px #ffffff33;
+  box-shadow: 0 0 0 5px #08264d, 0 0 5px 5px rgba(255, 255, 255, 0.2);
 }
-
 .sheet-stat-control button {
   border: none;
-  background-color: #08264D;
+  background-color: #08264d;
   border-radius: 4px;
   padding: 5px;
   font-size: 20px;
@@ -150,103 +134,83 @@
   margin-left: 0;
   margin-right: 20px;
   border-radius: 0px 18px 18px 0px;
-  
-  border: 1px dashed #ffffffbb;
+  border: 1px dashed rgba(255, 255, 255, 0.4);
   border-left-width: 0;
-  box-shadow: -4px 0 0 0 #08264D, 0 0 50px 4px #000;
+  box-shadow: -4px 0 0 0 #08264d, 0 0 50px 4px #000;
 }
-
 .sheet-stat-control button:hover {
-  border-color: #fff;
+  border-color: rgba(255, 255, 255, 0.67);
 }
-
 .sheet-stat-control button ~ button {
   border-radius: 18px 0px 0px 18px;
   margin-left: 20px;
   margin-right: 0;
-  
   border-left-width: 1px;
   border-right-width: 0;
-  box-shadow: 4px 0 0 0 #08264D, 0 0 50px 4px #000;
+  box-shadow: 4px 0 0 0 #08264d, 0 0 50px 4px #000;
 }
-
 .sheet-stat-control input {
   width: 30px;
   text-align: center;
 }
-
-.sheet-stat-control .sheet-stat-bear,
-.sheet-stat-control .sheet-stat-criminal{
+.sheet-stat-control .sheet-stat-primary,
+.sheet-stat-control .sheet-stat-secondary {
   width: 40px;
   height: 40px;
   display: none;
 }
-
-.sheet-stat-control input[name="attr_bear"][value="1"] ~ .sheet-stat-bear:nth-of-type(-n+1) {
+.sheet-stat-control input[name=attr_primary][value="1"] ~ .sheet-stat-primary:nth-of-type(-n + 1) {
+  display: inline;
+}
+.sheet-stat-control input[name=attr_primary][value="2"] ~ .sheet-stat-primary:nth-of-type(-n + 2) {
+  display: inline;
+}
+.sheet-stat-control input[name=attr_primary][value="3"] ~ .sheet-stat-primary:nth-of-type(-n + 3) {
+  display: inline;
+}
+.sheet-stat-control input[name=attr_primary][value="4"] ~ .sheet-stat-primary:nth-of-type(-n + 4) {
+  display: inline;
+}
+.sheet-stat-control input[name=attr_primary][value="5"] ~ .sheet-stat-primary:nth-of-type(-n + 5) {
+  display: inline;
+}
+.sheet-stat-control input[name=attr_primary][value="6"] ~ .sheet-stat-primary:nth-of-type(-n + 6) {
+  display: inline;
+}
+.sheet-stat-control input[name=attr_secondary][value="1"] ~ .sheet-stat-secondary:nth-of-type(n + 12) {
+  display: inline;
+}
+.sheet-stat-control input[name=attr_secondary][value="2"] ~ .sheet-stat-secondary:nth-of-type(n + 11) {
+  display: inline;
+}
+.sheet-stat-control input[name=attr_secondary][value="3"] ~ .sheet-stat-secondary:nth-of-type(n + 10) {
+  display: inline;
+}
+.sheet-stat-control input[name=attr_secondary][value="4"] ~ .sheet-stat-secondary:nth-of-type(n + 9) {
+  display: inline;
+}
+.sheet-stat-control input[name=attr_secondary][value="5"] ~ .sheet-stat-secondary:nth-of-type(n + 8) {
+  display: inline;
+}
+.sheet-stat-control input[name=attr_secondary][value="6"] ~ .sheet-stat-secondary:nth-of-type(n + 7) {
   display: inline;
 }
 
-.sheet-stat-control input[name="attr_bear"][value="2"] ~ .sheet-stat-bear:nth-of-type(-n+2) {
-  display: inline;
-}
-
-.sheet-stat-control input[name="attr_bear"][value="3"] ~ .sheet-stat-bear:nth-of-type(-n+3) {
-  display: inline;
-}
-
-.sheet-stat-control input[name="attr_bear"][value="4"] ~ .sheet-stat-bear:nth-of-type(-n+4) {
-  display: inline;
-}
-
-.sheet-stat-control input[name="attr_bear"][value="5"] ~ .sheet-stat-bear:nth-of-type(-n+5) {
-  display: inline;
-}
-
-.sheet-stat-control input[name="attr_bear"][value="6"] ~ .sheet-stat-bear:nth-of-type(-n+6) {
-  display: inline;
-}
-
-.sheet-stat-control input[name="attr_criminal"][value="1"] ~ .sheet-stat-criminal:nth-of-type(n+12) {
-  display: inline;
-}
-
-.sheet-stat-control input[name="attr_criminal"][value="2"] ~ .sheet-stat-criminal:nth-of-type(n+11) {
-  display: inline;
-}
-
-.sheet-stat-control input[name="attr_criminal"][value="3"] ~ .sheet-stat-criminal:nth-of-type(n+10) {
-  display: inline;
-}
-
-.sheet-stat-control input[name="attr_criminal"][value="4"] ~ .sheet-stat-criminal:nth-of-type(n+9) {
-  display: inline;
-}
-
-.sheet-stat-control input[name="attr_criminal"][value="5"] ~ .sheet-stat-criminal:nth-of-type(n+8) {
-  display: inline;
-}
-
-.sheet-stat-control input[name="attr_criminal"][value="6"] ~ .sheet-stat-criminal:nth-of-type(n+7) {
-  display: inline;
-}
-
-.sheet-roll-container  {
+.sheet-roll-container {
   display: flex;
   flex-flow: row;
   justify-content: space-between;
   margin-bottom: 30px;
 }
-
-.sheet-roll-container .sheet-roll-group  {
+.sheet-roll-container .sheet-roll-group {
   display: flex;
   flex-flow: column;
 }
-
-.sheet-roll-container button[type="roll"].sheet-roll {
+.sheet-roll-container button[type=roll].sheet-roll {
   padding: 8px;
   padding-right: 12px;
-  background-color: #08264D;
-  border: 1px #ffffff66 dashed;
+  background-color: #08264d;
+  border: 1px rgba(255, 255, 255, 0.4) dashed;
   color: #fff;
   background-image: none;
   border-radius: 4px;
@@ -256,16 +220,13 @@
   box-sizing: border-box;
   text-transform: lowercase;
 }
-
-.sheet-roll-container button[type="roll"].sheet-roll.sheet-roll-special {
-  background-color: #254A7D;
+.sheet-roll-container button[type=roll].sheet-roll.sheet-roll-special {
+  background-color: #254a7d;
 }
-
-.sheet-roll-container button[type="roll"].sheet-roll:hover {
-  border-color: #ffffffaa;
+.sheet-roll-container button[type=roll].sheet-roll:hover {
+  border-color: rgba(255, 255, 255, 0.67);
 }
-
-.sheet-roll-container button[type="roll"].sheet-roll:before {
+.sheet-roll-container button[type=roll].sheet-roll:before {
   vertical-align: top;
   margin-right: 2px;
   opacity: 0.7;
@@ -285,7 +246,6 @@
   visibility: hidden;
   opacity: 0;
 }
-
 .sheet-overlay:target {
   visibility: visible;
   opacity: 1;
@@ -302,7 +262,7 @@
 
 .sheet-popup {
   margin: 0 auto;
-  background: #0C366E;
+  background: #0c366e;
   border-radius: 6px;
   max-width: 540px;
   position: relative;
@@ -313,7 +273,6 @@
   flex-direction: column;
   padding: 4px;
 }
-
 .sheet-popup > header {
   position: relative;
   display: flex;
@@ -322,7 +281,6 @@
   align-items: center;
   margin: 0 10px;
 }
-
 .sheet-popup .sheet-overlay-close {
   font-size: 24px;
   padding: 10px;
@@ -330,10 +288,9 @@
   color: #fff;
   font-weight: bold;
 }
-
 .sheet-popup .sheet-overlay-close:hover {
   text-decoration: none;
-  color: #68A9FF;
+  color: #68a9ff;
 }
 
 .sheet-overlay-content {
@@ -341,21 +298,19 @@
   max-height: 100%;
   overflow: hidden;
   overflow-y: auto;
-
-  scrollbar-color: #08264D #516e97;
+  scrollbar-color: #08264d #516e97;
   scrollbar-width: thin;
 }
-
 .sheet-overlay-content::-webkit-scrollbar {
   width: 10px;
-  cursor:pointer;
+  cursor: pointer;
 }
 .sheet-overlay-content::-webkit-scrollbar-track {
   background: #516e97;
   border-radius: 4px;
 }
 .sheet-overlay-content::-webkit-scrollbar-thumb {
-  background-color: #08264D;
+  background-color: #08264d;
   border-radius: 4px;
   border: 1px solid #516e97;
 }
@@ -367,16 +322,13 @@
   color: #fff;
   font-weight: bold;
 }
-
 .sheet-rules h3 {
   font-size: 15px;
 }
-
 .sheet-rules p {
   font-size: 14px;
   font-family: "Indie Flower", cursive;
 }
-
 .sheet-rules h2 a:before {
   content: "+ ";
   display: inline-block;
@@ -385,15 +337,14 @@
 
 .sheet-rolltemplate-Skill {
   position: relative;
-  background: #0C366E url("https://github.com/tysonmatanich/roll20-honey-heist/blob/main/images/repeating.png?raw=true");
+  background: #0c366e url("https://github.com/tysonmatanich/roll20-honey-heist/blob/main/assets/images/repeating.png?raw=true");
   color: #fff;
   text-align: center;
   max-width: 340px;
   border-radius: 4px;
   font-family: cursive;
-  box-shadow: inset 0 0 0 9px #08264D;
+  box-shadow: inset 0 0 0 9px #08264d;
 }
-
 .sheet-rolltemplate-Skill:after {
   content: "";
   top: 8px;
@@ -404,7 +355,6 @@
   border: 2px solid #fff;
   border-radius: 2px;
 }
-
 .sheet-rolltemplate-Skill:before {
   content: "";
   top: 8px;
@@ -412,40 +362,34 @@
   right: 8px;
   bottom: 8px;
   position: absolute;
-  background: linear-gradient(to bottom, #254A7D 0%, #0C366E00 100%);
+  background: linear-gradient(to bottom, #254a7d 0%, rgba(12, 54, 110, 0) 100%);
 }
-
 .sheet-rolltemplate-Skill .sheet-result-container {
   position: relative;
   z-index: 1;
   padding: 10px;
   font-family: "Indie Flower", cursive;
 }
-
 .sheet-rolltemplate-Skill .sheet-result {
   font-size: 40px;
   line-height: normal;
   font-weight: normal;
   margin: 16px 0 0;
 }
-
 .sheet-rolltemplate-Skill .sheet-action-type {
   font-size: 18px;
   line-height: normal;
   font-weight: normal;
 }
-
 .sheet-rolltemplate-Skill .sheet-character {
   font-size: 13px;
   line-height: normal;
   font-weight: normal;
 }
-
 .sheet-rolltemplate-Skill .sheet-values {
   font-family: cursive;
   margin: 10px 0;
 }
-
 .sheet-rolltemplate-Skill .sheet-compare-symbol {
   display: inline-block;
   font-size: 18px;
@@ -453,7 +397,6 @@
   margin: 0 6px;
   font-family: "Indie Flower", cursive;
 }
-
 .sheet-rolltemplate-Skill .inlinerollresult {
   display: inline-block;
   text-align: center;
@@ -467,39 +410,33 @@
   min-width: 20px;
   box-sizing: border-box;
 }
-
 .sheet-rolltemplate-Skill .sheet-success + .sheet-value-result > .inlinerollresult {
-  border: 2px solid #0C9D20;
-  background: #0C9D20;
+  border: 2px solid #0c9d20;
+  background: #0c9d20;
 }
-
 .sheet-rolltemplate-Skill .sheet-fail + .sheet-value-result > .inlinerollresult {
-  border: 2px solid #CC2E2E;
-  background: #CC2E2E;
+  border: 2px solid #cc2e2e;
+  background: #cc2e2e;
 }
-
 .sheet-rolltemplate-Skill .sheet-value-result > .inlinerollresult.fullcrit {
-  border-color: #CC2E2E;
+  border-color: #cc2e2e;
 }
-
 .sheet-rolltemplate-Skill .sheet-value-result > .inlinerollresult.fullfail {
-  border-color: #0C9D20;
+  border-color: #0c9d20;
 }
-
-.sheet-rolltemplate-Skill .sheet-bear,
-.sheet-rolltemplate-Skill .sheet-criminal{
+.sheet-rolltemplate-Skill .sheet-primary,
+.sheet-rolltemplate-Skill .sheet-secondary {
   position: absolute;
   z-index: -1;
   bottom: 10px;
   left: 10px;
-  background-image: url("https://github.com/tysonmatanich/roll20-honey-heist/blob/main/images/bear-left.png?raw=true");
+  background-image: url("https://github.com/tysonmatanich/roll20-honey-heist/blob/main/assets/images/bear-left.png?raw=true");
   background-size: contain;
   width: 90px;
   height: 90px;
 }
-
-.sheet-rolltemplate-Skill .sheet-criminal {
+.sheet-rolltemplate-Skill .sheet-secondary {
   left: auto;
   right: 10px;
-  background-image: url("https://github.com/tysonmatanich/roll20-honey-heist/blob/main/images/criminal-right.png?raw=true");
+  background-image: url("https://github.com/tysonmatanich/roll20-honey-heist/blob/main/assets/images/criminal-right.png?raw=true");
 }

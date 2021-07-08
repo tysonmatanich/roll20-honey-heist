@@ -1,0 +1,31 @@
+$color-light: #ccc;
+
+$color-foreground: #fff;
+
+$color-background: #0c366e;
+$color-gridlines: #254a7d;
+
+$color-textbox: $color-gridlines;
+
+$color-button: #08264d;
+$color-button-secondary: $color-textbox;
+$color-button-border: transparentize($color-foreground, 0.6);
+$color-button-border-hover: transparentize($color-foreground, 0.33);
+
+$color-link: #68a9ff;
+
+$color-scrollbar-track: #516e97;
+$color-scrollbar-thumb: $color-button;
+
+$color-success: #0c9d20;
+$color-fail: #cc2e2e;
+$color-neutral: #365e95;
+
+$color-outline-dark: $color-button;
+$color-shadow: #000;
+
+//$color-shadow: transparentize($color-foreground, 0.8); // box-shadow #ffffff33
+//$color-shadow: transparentize($color-foreground, 0.27); // button border dashed #ffffffbb
+
+$font-primary: "Indie Flower", cursive;
+$font-secondary: cursive;

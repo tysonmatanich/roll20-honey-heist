@@ -1,0 +1,398 @@
+@use "sass:color";
+@import "./_settings.scss";
+
+.sheet-honey-heist {
+  background: $color-background
+    url("https://github.com/tysonmatanich/roll20-honey-heist/blob/main/assets/images/repeating.png?raw=true");
+  color: $color-foreground;
+  padding: 20px;
+  font-family: $font-primary;
+  border-radius: 8px;
+  min-width: 370px;
+  box-sizing: border-box;
+
+  a {
+    color: $color-link;
+
+    &:hover {
+      color: $color-link;
+      text-decoration: underline;
+    }
+  }
+}
+
+.sheet-info {
+  margin: 10px auto 20px;
+  max-width: 520px;
+
+  h1 {
+    color: $color-foreground;
+    margin-bottom: 10px;
+  }
+}
+
+.sheet-inputs {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 -10px;
+
+  .sheet-input {
+    padding: 5px 10px;
+    box-sizing: border-box;
+
+    &.sheet-input-full {
+      padding: 5px 10px;
+      box-sizing: border-box;
+      width: 100%;
+    }
+
+    label {
+      font-family: $font-primary;
+      font-size: 13px;
+      line-height: 23px;
+      color: $color-foreground;
+      opacity: 0.7;
+      text-transform: lowercase;
+    }
+
+    input,
+    textarea {
+      border: 1px solid transparent;
+      border-radius: 4px;
+      background-color: $color-textbox;
+      color: $color-foreground;
+      font-size: 15px;
+      line-height: normal;
+      padding: 4px 8px;
+      width: 250px;
+    }
+
+    textarea {
+      min-width: 100%;
+      max-width: 100%;
+      min-height: 2em;
+      height: 5.5em;
+      box-sizing: border-box;
+      cursor: auto;
+
+      scrollbar-color: $color-scrollbar-thumb $color-scrollbar-track;
+      scrollbar-width: thin;
+
+      &::-webkit-scrollbar {
+        width: 10px;
+        cursor: pointer;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: $color-scrollbar-track;
+        border-radius: 4px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: $color-scrollbar-thumb;
+        border-radius: 4px;
+        border: 1px solid $color-scrollbar-track;
+      }
+
+      &::-webkit-scrollbar-corner {
+        background: $color-scrollbar-track;
+        border-radius: 0 0 1px 0;
+      }
+
+      &::-webkit-resizer {
+        background: transparent;
+        border-top: 10px solid $color-textbox;
+        border-right: 10px solid transparent;
+      }
+    }
+  }
+}
+
+.sheet-stats {
+  max-width: 520px;
+  margin: 30px auto 0;
+
+  .sheet-stats-header {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+
+    label {
+      font-family: $font-primary;
+      color: $color-foreground;
+      font-size: 23px;
+
+      + label {
+        text-align: right;
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+.sheet-stat-control {
+  overflow: hidden;
+  background: $color-foreground linear-gradient(to bottom, $color-foreground 0%, color.scale($color-foreground, $lightness: -20%) $color-light 100%);
+  border-radius: 2px;
+  margin: 10px 4px;
+  padding: 10px 0;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-between;
+
+  box-shadow: 0 0 0 5px $color-button, 0 0 5px 5px transparentize($color-foreground, 0.8);
+
+  button {
+    border: none;
+    background-color: $color-button;
+    border-radius: 4px;
+    padding: 5px;
+    font-size: 20px;
+    width: 45px;
+    height: 36px;
+    box-sizing: border-box;
+    margin-left: 0;
+    margin-right: 20px;
+    border-radius: 0px 18px 18px 0px;
+
+    border: 1px dashed $color-button-border; //TODO: Lighten
+    border-left-width: 0;
+    box-shadow: -4px 0 0 0 $color-button, 0 0 50px 4px $color-shadow;
+
+    &:hover {
+      border-color: $color-button-border-hover; //TODO: Lighten
+    }
+
+    ~ button {
+      border-radius: 18px 0px 0px 18px;
+      margin-left: 20px;
+      margin-right: 0;
+
+      border-left-width: 1px;
+      border-right-width: 0;
+      box-shadow: 4px 0 0 0 $color-button, 0 0 50px 4px $color-shadow;
+    }
+  }
+
+  input {
+    width: 30px;
+    text-align: center;
+  }
+
+  .sheet-stat-primary,
+  .sheet-stat-secondary {
+    width: 40px;
+    height: 40px;
+    display: none;
+  }
+
+  input[name="attr_primary"] {
+    &[value="1"] ~ .sheet-stat-primary:nth-of-type(-n + 1) {
+      display: inline;
+    }
+
+    &[value="2"] ~ .sheet-stat-primary:nth-of-type(-n + 2) {
+      display: inline;
+    }
+
+    &[value="3"] ~ .sheet-stat-primary:nth-of-type(-n + 3) {
+      display: inline;
+    }
+
+    &[value="4"] ~ .sheet-stat-primary:nth-of-type(-n + 4) {
+      display: inline;
+    }
+
+    &[value="5"] ~ .sheet-stat-primary:nth-of-type(-n + 5) {
+      display: inline;
+    }
+
+    &[value="6"] ~ .sheet-stat-primary:nth-of-type(-n + 6) {
+      display: inline;
+    }
+  }
+
+  input[name="attr_secondary"] {
+    &[value="1"] ~ .sheet-stat-secondary:nth-of-type(n + 12) {
+      display: inline;
+    }
+
+    &[value="2"] ~ .sheet-stat-secondary:nth-of-type(n + 11) {
+      display: inline;
+    }
+
+    &[value="3"] ~ .sheet-stat-secondary:nth-of-type(n + 10) {
+      display: inline;
+    }
+
+    &[value="4"] ~ .sheet-stat-secondary:nth-of-type(n + 9) {
+      display: inline;
+    }
+
+    &[value="5"] ~ .sheet-stat-secondary:nth-of-type(n + 8) {
+      display: inline;
+    }
+
+    &[value="6"] ~ .sheet-stat-secondary:nth-of-type(n + 7) {
+      display: inline;
+    }
+  }
+}
+
+.sheet-roll-container {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  margin-bottom: 30px;
+
+  .sheet-roll-group {
+    display: flex;
+    flex-flow: column;
+  }
+
+  button[type="roll"].sheet-roll {
+    padding: 8px;
+    padding-right: 12px;
+    background-color: $color-button;
+    border: 1px $color-button-border dashed;
+    color: $color-foreground;
+    background-image: none;
+    border-radius: 4px;
+    margin: 6px 0;
+    text-align: center;
+    min-width: 160px;
+    box-sizing: border-box;
+    text-transform: lowercase;
+
+    &.sheet-roll-special {
+      background-color: $color-button-secondary;
+    }
+
+    &:hover {
+      border-color: $color-button-border-hover;
+    }
+
+    &:before {
+      vertical-align: top;
+      margin-right: 2px;
+      opacity: 0.7;
+    }
+  }
+}
+
+.sheet-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: opacity 500ms;
+  display: flex;
+  align-items: flex-start;
+  padding: 20px;
+  padding-right: 26px;
+  visibility: hidden;
+  opacity: 0;
+
+  &:target {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.sheet-overlay-background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.sheet-popup {
+  margin: 0 auto;
+  background: $color-background;
+  border-radius: 6px;
+  max-width: 540px;
+  position: relative;
+  flex-shrink: 1;
+  flex-grow: 0;
+  max-height: calc(100vh - 40px);
+  display: flex;
+  flex-direction: column;
+  padding: 4px;
+
+  > header {
+    position: relative;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 10px;
+  }
+
+  .sheet-overlay-close {
+    font-size: 24px;
+    padding: 10px;
+    font-family: $font-primary;
+    color: $color-foreground;
+    font-weight: bold;
+
+    &:hover {
+      text-decoration: none;
+      color: $color-link;
+    }
+  }
+}
+
+.sheet-overlay-content {
+  padding: 10px;
+  max-height: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+
+  scrollbar-color: $color-scrollbar-thumb $color-scrollbar-track;
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+    cursor: pointer;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $color-scrollbar-track;
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $color-scrollbar-thumb;
+    border-radius: 4px;
+    border: 1px solid $color-scrollbar-track;
+  }
+}
+
+.sheet-rules {
+  h2,
+  h3 {
+    font-size: 18px;
+    font-family: $font-primary;
+    color: $color-foreground;
+    font-weight: bold;
+  }
+
+  h3 {
+    font-size: 15px;
+  }
+
+  p {
+    font-size: 14px;
+    font-family: $font-primary;
+  }
+
+  h2 a:before {
+    content: "+ ";
+    display: inline-block;
+    padding: 0 3px 0 8px;
+  }
+}

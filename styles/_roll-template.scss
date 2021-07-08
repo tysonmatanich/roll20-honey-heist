@@ -1,0 +1,129 @@
+@import "./_settings.scss";
+
+.sheet-rolltemplate-Skill {
+  position: relative;
+  background: $color-background
+    url("https://github.com/tysonmatanich/roll20-honey-heist/blob/main/assets/images/repeating.png?raw=true");
+  color: $color-foreground;
+  text-align: center;
+  max-width: 340px;
+  border-radius: 4px;
+  font-family: $font-secondary;
+  box-shadow: inset 0 0 0 9px $color-outline-dark;
+
+  &:after {
+    content: "";
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+    position: absolute;
+    border: 2px solid $color-foreground;
+    border-radius: 2px;
+  }
+
+  &:before {
+    content: "";
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+    position: absolute;
+    background: linear-gradient(
+      to bottom,
+      $color-gridlines 0%,
+      transparentize($color-background, 1) 100%
+    );
+  }
+
+  .sheet-result-container {
+    position: relative;
+    z-index: 1;
+    padding: 10px;
+    font-family: $font-primary;
+  }
+
+  .sheet-result {
+    font-size: 40px;
+    line-height: normal;
+    font-weight: normal;
+    margin: 16px 0 0;
+  }
+
+  .sheet-action-type {
+    font-size: 18px;
+    line-height: normal;
+    font-weight: normal;
+  }
+
+  .sheet-character {
+    font-size: 13px;
+    line-height: normal;
+    font-weight: normal;
+  }
+
+  .sheet-values {
+    font-family: $font-secondary;
+    margin: 10px 0;
+  }
+
+  .sheet-compare-symbol {
+    display: inline-block;
+    font-size: 18px;
+    line-height: normal;
+    margin: 0 6px;
+    font-family: $font-primary;
+  }
+
+  .inlinerollresult {
+    display: inline-block;
+    text-align: center;
+    background-color: $color-neutral;
+    border: 2px solid $color-neutral;
+    color: $color-foreground;
+    border-radius: 2px;
+    font-size: 1.1em;
+    padding: 0 3px;
+    font-weight: bold;
+    min-width: 20px;
+    box-sizing: border-box;
+  }
+
+  .sheet-success + .sheet-value-result > .inlinerollresult {
+    border: 2px solid $color-success;
+    background: $color-success;
+  }
+
+  .sheet-fail + .sheet-value-result > .inlinerollresult {
+    border: 2px solid $color-fail;
+    background: $color-fail;
+  }
+
+  .sheet-value-result {
+    > .inlinerollresult.fullcrit {
+      border-color: $color-fail;
+    }
+
+    > .inlinerollresult.fullfail {
+      border-color: $color-success;
+    }
+  }
+
+  .sheet-primary,
+  .sheet-secondary {
+    position: absolute;
+    z-index: -1;
+    bottom: 10px;
+    left: 10px;
+    background-image: url("https://github.com/tysonmatanich/roll20-honey-heist/blob/main/assets/images/bear-left.png?raw=true");
+    background-size: contain;
+    width: 90px;
+    height: 90px;
+  }
+
+  .sheet-secondary {
+    left: auto;
+    right: 10px;
+    background-image: url("https://github.com/tysonmatanich/roll20-honey-heist/blob/main/assets/images/criminal-right.png?raw=true");
+  }
+}

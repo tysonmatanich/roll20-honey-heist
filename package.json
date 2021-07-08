@@ -1,0 +1,25 @@
+{
+  "name": "honey-heist",
+  "version": "1.0.0",
+  "description": "Honey Heist Role20 template",
+  "author": "Tyson Matanich (https://matanich.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tysonmatanich/roll20-honey-heist/issues"
+  },
+  "homepage": "https://github.com/tysonmatanich/roll20-honey-heist",
+  "type": "module",
+  "scripts": {
+    "build": "npm run build:html && npm run build:styles",
+    "build:html": "node html/merge.js honey-heist.html",
+    "build:styles": "sass --no-source-map styles/merge.scss:honey-heist.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tysonmatanich/roll20-honey-heist.git"
+  },
+  "devDependencies": {
+    "better-concat": "^1.0.1",
+    "sass": "^1.35.2"
+  }
+}

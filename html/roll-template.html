@@ -1,0 +1,37 @@
+<rolltemplate class="sheet-rolltemplate-Skill">
+  <div class="sheet-result-container">
+    {{#^rollGreater() diceRoll playerStat}}
+      <div class="sheet-result">Success!</div>
+    {{/^rollGreater() diceRoll playerStat}}
+    {{#rollGreater() diceRoll playerStat}}
+      <div class="sheet-result">Fail...</div>
+    {{/rollGreater() diceRoll playerStat}}
+
+    <div class="sheet-action-type">{{special}} {{characterType}} Action</div>
+
+    <div class="sheet-character">by {{characterName}}</div>
+
+    <div class="sheet-values">
+      {{#^rollGreater() diceRoll playerStat}}
+        <div class="sheet-success"></div>
+      {{/^rollGreater() diceRoll playerStat}}
+      {{#rollGreater() diceRoll playerStat}}
+        <div class="sheet-fail"></div>
+      {{/rollGreater() diceRoll playerStat}}
+      <div class="sheet-value-result">
+        {{diceRoll}}
+        <span class="sheet-compare-symbol">≤</span>
+        <span class="sheet-player-stat"> {{playerStat}} </span>
+      </div>
+    </div>
+
+    {{#rollTotal() isPrimaryBear 1}}
+      {{#isPrimary}}
+        <div class="sheet-primary"></div>
+      {{/isPrimary}}
+      {{#isSecondary}}
+        <div class="sheet-secondary"></div>
+      {{/isSecondary}}
+    {{/rollTotal() isPrimaryBear 1}}
+  </div>
+</rolltemplate>

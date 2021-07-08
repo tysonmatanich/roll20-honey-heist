@@ -1,0 +1,14 @@
+{
+  "editor.formatOnSave": false,
+  "editor.rulers": [145],
+  "editor.tabSize": 2,
+  "files.exclude": {
+    "**/**/node_modules": true
+  },
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "[plaintext]": {
+    "files.insertFinalNewline": false
+  }
+}
