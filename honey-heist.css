@@ -1,11 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
 .sheet-honey-heist {
-  background: #0c366e url("https://github.com/tysonmatanich/roll20-honey-heist/blob/main/assets/images/repeating.png?raw=true");
+  background: #0c366e url("https://github.com/tysonmatanich/roll20-honey-heist/blob/custom/assets/images/repeating.png?raw=true");
   color: #fff;
   padding: 20px;
   font-family: "Indie Flower", cursive;
   border-radius: 8px;
   min-width: 370px;
+  box-sizing: border-box;
+  position: relative;
+  min-height: calc(100vh - 142px);
   box-sizing: border-box;
 }
 .sheet-honey-heist a {
@@ -15,40 +18,40 @@
   color: #68a9ff;
   text-decoration: underline;
 }
-
-.sheet-info {
-  margin: 10px auto 20px;
+.sheet-honey-heist .info {
+  margin: 10px auto;
   max-width: 520px;
 }
-.sheet-info h1 {
+.sheet-honey-heist .info h1 {
   color: #fff;
   margin-bottom: 10px;
 }
-
-.sheet-inputs {
+.sheet-honey-heist .info .inputs {
   display: flex;
   flex-flow: row wrap;
   margin: 0 -10px;
 }
-.sheet-inputs .sheet-input {
+.sheet-honey-heist .info .inputs .input {
   padding: 5px 10px;
   box-sizing: border-box;
 }
-.sheet-inputs .sheet-input.sheet-input-full {
+.sheet-honey-heist .info .inputs .input.input-full {
   padding: 5px 10px;
   box-sizing: border-box;
   width: 100%;
 }
-.sheet-inputs .sheet-input label {
+.sheet-honey-heist .info .inputs .input label {
   font-family: "Indie Flower", cursive;
   font-size: 13px;
   line-height: 23px;
   color: #fff;
   opacity: 0.7;
   text-transform: lowercase;
+  font-weight: normal;
+  margin: 0;
 }
-.sheet-inputs .sheet-input input,
-.sheet-inputs .sheet-input textarea {
+.sheet-honey-heist .info .inputs .input input,
+.sheet-honey-heist .info .inputs .input textarea {
   border: 1px solid transparent;
   border-radius: 4px;
   background-color: #254a7d;
@@ -58,7 +61,7 @@
   padding: 4px 8px;
   width: 250px;
 }
-.sheet-inputs .sheet-input textarea {
+.sheet-honey-heist .info .inputs .input textarea {
   min-width: 100%;
   max-width: 100%;
   min-height: 2em;
@@ -68,51 +71,51 @@
   scrollbar-color: #08264d #516e97;
   scrollbar-width: thin;
 }
-.sheet-inputs .sheet-input textarea::-webkit-scrollbar {
+.sheet-honey-heist .info .inputs .input textarea::-webkit-scrollbar {
   width: 10px;
   cursor: pointer;
 }
-.sheet-inputs .sheet-input textarea::-webkit-scrollbar-track {
+.sheet-honey-heist .info .inputs .input textarea::-webkit-scrollbar-track {
   background: #516e97;
   border-radius: 4px;
 }
-.sheet-inputs .sheet-input textarea::-webkit-scrollbar-thumb {
+.sheet-honey-heist .info .inputs .input textarea::-webkit-scrollbar-thumb {
   background-color: #08264d;
   border-radius: 4px;
   border: 1px solid #516e97;
 }
-.sheet-inputs .sheet-input textarea::-webkit-scrollbar-corner {
+.sheet-honey-heist .info .inputs .input textarea::-webkit-scrollbar-corner {
   background: #516e97;
   border-radius: 0 0 1px 0;
 }
-.sheet-inputs .sheet-input textarea::-webkit-resizer {
+.sheet-honey-heist .info .inputs .input textarea::-webkit-resizer {
   background: transparent;
   border-top: 10px solid #254a7d;
   border-right: 10px solid transparent;
 }
-
-.sheet-stats {
+.sheet-honey-heist .stats {
   max-width: 520px;
-  margin: 30px auto 0;
+  margin: 0 auto;
 }
-.sheet-stats .sheet-stats-header {
+.sheet-honey-heist .stats .stats-header {
   display: flex;
   flex-flow: row;
   justify-content: space-between;
 }
-.sheet-stats .sheet-stats-header label {
+.sheet-honey-heist .stats .stats-header label {
   font-family: "Indie Flower", cursive;
   color: #fff;
   font-size: 23px;
+  font-weight: normal;
+  margin: 0;
 }
-.sheet-stats .sheet-stats-header label + label {
+.sheet-honey-heist .stats .stats-header label + label {
   text-align: right;
   padding-right: 0;
 }
-
-.sheet-stat-control {
+.sheet-honey-heist .stats .stat-control {
   overflow: hidden;
-  background: #fff linear-gradient(to bottom, #fff 0%, #cccccc #ccc 100%);
+  background: #fff linear-gradient(to bottom, #fff 0%, #cccccc 100%);
   border-radius: 2px;
   margin: 10px 4px;
   padding: 10px 0;
@@ -122,7 +125,7 @@
   justify-content: space-between;
   box-shadow: 0 0 0 5px #08264d, 0 0 5px 5px rgba(255, 255, 255, 0.2);
 }
-.sheet-stat-control button {
+.sheet-honey-heist .stats .stat-control button {
   border: none;
   background-color: #08264d;
   border-radius: 4px;
@@ -138,10 +141,10 @@
   border-left-width: 0;
   box-shadow: -4px 0 0 0 #08264d, 0 0 50px 4px #000;
 }
-.sheet-stat-control button:hover {
+.sheet-honey-heist .stats .stat-control button:hover {
   border-color: rgba(255, 255, 255, 0.67);
 }
-.sheet-stat-control button ~ button {
+.sheet-honey-heist .stats .stat-control button ~ button {
   border-radius: 18px 0px 0px 18px;
   margin-left: 20px;
   margin-right: 0;
@@ -149,64 +152,70 @@
   border-right-width: 0;
   box-shadow: 4px 0 0 0 #08264d, 0 0 50px 4px #000;
 }
-.sheet-stat-control input {
-  width: 30px;
-  text-align: center;
-}
-.sheet-stat-control .sheet-stat-primary,
-.sheet-stat-control .sheet-stat-secondary {
+.sheet-honey-heist .stats .stat-control .stat-primary,
+.sheet-honey-heist .stats .stat-control .stat-secondary {
   width: 40px;
   height: 40px;
   display: none;
+  background-image: url("https://github.com/tysonmatanich/roll20-honey-heist/blob/custom/assets/images/primary.png?raw=true");
+  background-size: contain;
 }
-.sheet-stat-control input[name=attr_primary][value="1"] ~ .sheet-stat-primary:nth-of-type(-n + 1) {
+.sheet-honey-heist .stats .stat-control .stat-secondary {
+  background-image: url("https://github.com/tysonmatanich/roll20-honey-heist/blob/custom/assets/images/secondary.png?raw=true");
+}
+.sheet-honey-heist .stats .stat-control input[name=attr_is_primary_bear][value="1"] ~ .stat-primary {
+  background-image: url("https://github.com/tysonmatanich/roll20-honey-heist/blob/custom/assets/images/bear.png?raw=true");
+}
+.sheet-honey-heist .stats .stat-control input[name=attr_is_primary_bear][value="1"] ~ .stat-secondary {
+  background-image: url("https://github.com/tysonmatanich/roll20-honey-heist/blob/custom/assets/images/criminal.png?raw=true");
+}
+.sheet-honey-heist .stats .stat-control input[name=attr_primary][value="1"] ~ .stat-primary:nth-of-type(-n + 1) {
   display: inline;
 }
-.sheet-stat-control input[name=attr_primary][value="2"] ~ .sheet-stat-primary:nth-of-type(-n + 2) {
+.sheet-honey-heist .stats .stat-control input[name=attr_primary][value="2"] ~ .stat-primary:nth-of-type(-n + 2) {
   display: inline;
 }
-.sheet-stat-control input[name=attr_primary][value="3"] ~ .sheet-stat-primary:nth-of-type(-n + 3) {
+.sheet-honey-heist .stats .stat-control input[name=attr_primary][value="3"] ~ .stat-primary:nth-of-type(-n + 3) {
   display: inline;
 }
-.sheet-stat-control input[name=attr_primary][value="4"] ~ .sheet-stat-primary:nth-of-type(-n + 4) {
+.sheet-honey-heist .stats .stat-control input[name=attr_primary][value="4"] ~ .stat-primary:nth-of-type(-n + 4) {
   display: inline;
 }
-.sheet-stat-control input[name=attr_primary][value="5"] ~ .sheet-stat-primary:nth-of-type(-n + 5) {
+.sheet-honey-heist .stats .stat-control input[name=attr_primary][value="5"] ~ .stat-primary:nth-of-type(-n + 5) {
   display: inline;
 }
-.sheet-stat-control input[name=attr_primary][value="6"] ~ .sheet-stat-primary:nth-of-type(-n + 6) {
+.sheet-honey-heist .stats .stat-control input[name=attr_primary][value="6"] ~ .stat-primary:nth-of-type(-n + 6) {
   display: inline;
 }
-.sheet-stat-control input[name=attr_secondary][value="1"] ~ .sheet-stat-secondary:nth-of-type(n + 12) {
+.sheet-honey-heist .stats .stat-control input[name=attr_secondary][value="1"] ~ .stat-secondary:nth-of-type(n + 12) {
   display: inline;
 }
-.sheet-stat-control input[name=attr_secondary][value="2"] ~ .sheet-stat-secondary:nth-of-type(n + 11) {
+.sheet-honey-heist .stats .stat-control input[name=attr_secondary][value="2"] ~ .stat-secondary:nth-of-type(n + 11) {
   display: inline;
 }
-.sheet-stat-control input[name=attr_secondary][value="3"] ~ .sheet-stat-secondary:nth-of-type(n + 10) {
+.sheet-honey-heist .stats .stat-control input[name=attr_secondary][value="3"] ~ .stat-secondary:nth-of-type(n + 10) {
   display: inline;
 }
-.sheet-stat-control input[name=attr_secondary][value="4"] ~ .sheet-stat-secondary:nth-of-type(n + 9) {
+.sheet-honey-heist .stats .stat-control input[name=attr_secondary][value="4"] ~ .stat-secondary:nth-of-type(n + 9) {
   display: inline;
 }
-.sheet-stat-control input[name=attr_secondary][value="5"] ~ .sheet-stat-secondary:nth-of-type(n + 8) {
+.sheet-honey-heist .stats .stat-control input[name=attr_secondary][value="5"] ~ .stat-secondary:nth-of-type(n + 8) {
   display: inline;
 }
-.sheet-stat-control input[name=attr_secondary][value="6"] ~ .sheet-stat-secondary:nth-of-type(n + 7) {
+.sheet-honey-heist .stats .stat-control input[name=attr_secondary][value="6"] ~ .stat-secondary:nth-of-type(n + 7) {
   display: inline;
 }
-
-.sheet-roll-container {
+.sheet-honey-heist .roll-container {
   display: flex;
   flex-flow: row;
   justify-content: space-between;
   margin-bottom: 30px;
 }
-.sheet-roll-container .sheet-roll-group {
+.sheet-honey-heist .roll-container .roll-group {
   display: flex;
   flex-flow: column;
 }
-.sheet-roll-container button[type=roll].sheet-roll {
+.sheet-honey-heist .roll-container button.button {
   padding: 8px;
   padding-right: 12px;
   background-color: #08264d;
@@ -219,20 +228,21 @@
   min-width: 160px;
   box-sizing: border-box;
   text-transform: lowercase;
+  text-shadow: none;
+  box-shadow: none;
 }
-.sheet-roll-container button[type=roll].sheet-roll.sheet-roll-special {
+.sheet-honey-heist .roll-container button.button.special {
   background-color: #254a7d;
 }
-.sheet-roll-container button[type=roll].sheet-roll:hover {
+.sheet-honey-heist .roll-container button.button:hover {
   border-color: rgba(255, 255, 255, 0.67);
 }
-.sheet-roll-container button[type=roll].sheet-roll:before {
+.sheet-honey-heist .roll-container button.button:before {
   vertical-align: top;
   margin-right: 2px;
   opacity: 0.7;
 }
-
-.sheet-overlay {
+.sheet-honey-heist .popup-container {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -246,12 +256,11 @@
   visibility: hidden;
   opacity: 0;
 }
-.sheet-overlay:target {
+.sheet-honey-heist .popup-container:target {
   visibility: visible;
   opacity: 1;
 }
-
-.sheet-overlay-background {
+.sheet-honey-heist .popup-container .background {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -259,8 +268,7 @@
   right: 0;
   background: rgba(0, 0, 0, 0.7);
 }
-
-.sheet-popup {
+.sheet-honey-heist .popup-container .popup {
   margin: 0 auto;
   background: #0c366e;
   border-radius: 6px;
@@ -273,7 +281,7 @@
   flex-direction: column;
   padding: 4px;
 }
-.sheet-popup > header {
+.sheet-honey-heist .popup-container .popup > header {
   position: relative;
   display: flex;
   flex-flow: row;
@@ -281,19 +289,18 @@
   align-items: center;
   margin: 0 10px;
 }
-.sheet-popup .sheet-overlay-close {
+.sheet-honey-heist .popup-container .popup .popup-close {
   font-size: 24px;
   padding: 10px;
   font-family: "Indie Flower", cursive;
   color: #fff;
   font-weight: bold;
 }
-.sheet-popup .sheet-overlay-close:hover {
+.sheet-honey-heist .popup-container .popup .popup-close:hover {
   text-decoration: none;
   color: #68a9ff;
 }
-
-.sheet-overlay-content {
+.sheet-honey-heist .popup-container .content {
   padding: 10px;
   max-height: 100%;
   overflow: hidden;
@@ -301,35 +308,34 @@
   scrollbar-color: #08264d #516e97;
   scrollbar-width: thin;
 }
-.sheet-overlay-content::-webkit-scrollbar {
+.sheet-honey-heist .popup-container .content::-webkit-scrollbar {
   width: 10px;
   cursor: pointer;
 }
-.sheet-overlay-content::-webkit-scrollbar-track {
+.sheet-honey-heist .popup-container .content::-webkit-scrollbar-track {
   background: #516e97;
   border-radius: 4px;
 }
-.sheet-overlay-content::-webkit-scrollbar-thumb {
+.sheet-honey-heist .popup-container .content::-webkit-scrollbar-thumb {
   background-color: #08264d;
   border-radius: 4px;
   border: 1px solid #516e97;
 }
-
-.sheet-rules h2,
-.sheet-rules h3 {
+.sheet-honey-heist .rules h2,
+.sheet-honey-heist .rules h3 {
   font-size: 18px;
   font-family: "Indie Flower", cursive;
   color: #fff;
   font-weight: bold;
 }
-.sheet-rules h3 {
+.sheet-honey-heist .rules h3 {
   font-size: 15px;
 }
-.sheet-rules p {
+.sheet-honey-heist .rules p {
   font-size: 14px;
   font-family: "Indie Flower", cursive;
 }
-.sheet-rules h2 a:before {
+.sheet-honey-heist .rules h2 a:before {
   content: "+ ";
   display: inline-block;
   padding: 0 3px 0 8px;
@@ -337,7 +343,7 @@
 
 .sheet-rolltemplate-Skill {
   position: relative;
-  background: #0c366e url("https://github.com/tysonmatanich/roll20-honey-heist/blob/main/assets/images/repeating.png?raw=true");
+  background: #0c366e url("https://github.com/tysonmatanich/roll20-honey-heist/blob/custom/assets/images/repeating.png?raw=true");
   color: #fff;
   text-align: center;
   max-width: 340px;
@@ -418,19 +424,13 @@
   border: 2px solid #cc2e2e;
   background: #cc2e2e;
 }
-.sheet-rolltemplate-Skill .sheet-value-result > .inlinerollresult.fullcrit {
-  border-color: #cc2e2e;
-}
-.sheet-rolltemplate-Skill .sheet-value-result > .inlinerollresult.fullfail {
-  border-color: #0c9d20;
-}
 .sheet-rolltemplate-Skill .sheet-primary,
 .sheet-rolltemplate-Skill .sheet-secondary {
   position: absolute;
   z-index: -1;
   bottom: 10px;
   left: 10px;
-  background-image: url("https://github.com/tysonmatanich/roll20-honey-heist/blob/main/assets/images/bear-left.png?raw=true");
+  background-image: url("https://github.com/tysonmatanich/roll20-honey-heist/blob/custom/assets/images/primary-left.png?raw=true");
   background-size: contain;
   width: 90px;
   height: 90px;
@@ -438,5 +438,11 @@
 .sheet-rolltemplate-Skill .sheet-secondary {
   left: auto;
   right: 10px;
-  background-image: url("https://github.com/tysonmatanich/roll20-honey-heist/blob/main/assets/images/criminal-right.png?raw=true");
+  background-image: url("https://github.com/tysonmatanich/roll20-honey-heist/blob/custom/assets/images/secondary-right.png?raw=true");
+}
+.sheet-rolltemplate-Skill .sheet-is-bear.sheet-primary {
+  background-image: url("https://github.com/tysonmatanich/roll20-honey-heist/blob/custom/assets/images/bear-left.png?raw=true");
+}
+.sheet-rolltemplate-Skill .sheet-is-bear.sheet-secondary {
+  background-image: url("https://github.com/tysonmatanich/roll20-honey-heist/blob/custom/assets/images/criminal-right.png?raw=true");
 }

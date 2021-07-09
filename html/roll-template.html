@@ -27,11 +27,19 @@
 
     {{#rollTotal() isPrimaryBear 1}}
       {{#isPrimary}}
+        <div class="sheet-primary sheet-is-bear"></div>
+      {{/isPrimary}}
+      {{#isSecondary}}
+        <div class="sheet-secondary sheet-is-bear"></div>
+      {{/isSecondary}}
+    {{/rollTotal() isPrimaryBear 1}}
+    {{#rollTotal() isPrimaryBear 0}}
+      {{#isPrimary}}
         <div class="sheet-primary"></div>
       {{/isPrimary}}
       {{#isSecondary}}
         <div class="sheet-secondary"></div>
       {{/isSecondary}}
-    {{/rollTotal() isPrimaryBear 1}}
+    {{/rollTotal() isPrimaryBear 0}}
   </div>
 </rolltemplate>

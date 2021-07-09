@@ -99,23 +99,13 @@
     background: $color-fail;
   }
 
-  .sheet-value-result {
-    > .inlinerollresult.fullcrit {
-      border-color: $color-fail;
-    }
-
-    > .inlinerollresult.fullfail {
-      border-color: $color-success;
-    }
-  }
-
   .sheet-primary,
   .sheet-secondary {
     position: absolute;
     z-index: -1;
     bottom: 10px;
     left: 10px;
-    background-image: url("https://github.com/tysonmatanich/roll20-honey-heist/blob/custom/assets/images/bear-left.png?raw=true");
+    background-image: url("https://github.com/tysonmatanich/roll20-honey-heist/blob/custom/assets/images/primary-left.png?raw=true");
     background-size: contain;
     width: 90px;
     height: 90px;
@@ -124,6 +114,16 @@
   .sheet-secondary {
     left: auto;
     right: 10px;
-    background-image: url("https://github.com/tysonmatanich/roll20-honey-heist/blob/custom/assets/images/criminal-right.png?raw=true");
+    background-image: url("https://github.com/tysonmatanich/roll20-honey-heist/blob/custom/assets/images/secondary-right.png?raw=true");
+  }
+
+  .sheet-is-bear {
+    &.sheet-primary {
+      background-image: url("https://github.com/tysonmatanich/roll20-honey-heist/blob/custom/assets/images/bear-left.png?raw=true");
+    }
+
+    &.sheet-secondary {
+      background-image: url("https://github.com/tysonmatanich/roll20-honey-heist/blob/custom/assets/images/criminal-right.png?raw=true");
+    }
   }
 }

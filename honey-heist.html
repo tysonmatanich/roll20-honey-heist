@@ -1,93 +1,88 @@
 <div class="sheet-honey-heist">
-    <div class="sheet-info">
-        <h1>Honey Heist</h1>
-        <input type="hidden" name="attr_primary_type" value="Bear" />
-        <input type="hidden" name="attr_secondary_type" value="Criminal" />
-        <div class="sheet-inputs">
-            <div class="sheet-input">
-                <label for="attr_character_name"><span name="attr_primary_type">Bear</span> name</label>
-                <input type="text" class="sheet-open" id="attr_character_name" name="attr_character_name" />
+    <div class="info">
+        <h1><span name="attr_game_name">Honey Heist</span></h1>
+        <div class="inputs">
+            <div class="input">
+                <label for="attr_character_name">name</label>
+                <input type="text" id="attr_character_name" name="attr_character_name" />
             </div>
-            <div class="sheet-input">
-                <input type="hidden" name="attr_label_0" value="type / skill" />
-                <label for="attr_value_0"><span name="attr_primary_type">Bear</span> <span name="attr_label_0">type / skill</span></label>
-                <input type="text" class="sheet-open" id="attr_custom_value_0" name="attr_custom_value_0" />
+            <div class="input">
+                <label for="attr_text_1"><span name="attr_label_1">type / skill</span></label>
+                <input type="text" id="attr_text_1" name="attr_text_1" />
             </div>
-            <div class="sheet-input">
-                <input type="hidden" name="attr_label_1" value="descriptor" />
-                <label for="attr_value_1"><span name="attr_label_1">descriptor</span></label>
-                <input type="text" class="sheet-open" id="attr_value_1" name="attr_custom_value_1" />
+            <div class="input">
+                <input type="hidden" name="attr_label_2" value="descriptor" />
+                <label for="attr_text_2"><span name="attr_label_2">descriptor</span></label>
+                <input type="text" id="attr_text_2" name="attr_text_2" />
             </div>
-            <div class="sheet-input">
-                <input type="hidden" name="attr_label_2" value="role" />
-                <label for="attr_value_2"><span name="attr_label_2">role</span></label>
-                <input type="text" class="sheet-open" id="attr_value_2" name="attr_value_2" />
+            <div class="input">
+                <input type="hidden" name="attr_label_3" value="role" />
+                <label for="attr_text_3"><span name="attr_label_3">role</span></label>
+                <input type="text" id="attr_text_3" name="attr_text_3" />
             </div>
-            <div class="sheet-input">
-                <input type="hidden" name="attr_label_3" value="attire" />
-                <label for="attr_value_3"><span name="attr_label_3">attire</span></label>
-                <input type="text" class="sheet-open" id="attr_value_3" name="attr_value_3" />
+            <div class="input">
+                <input type="hidden" name="attr_label_4" value="attire" />
+                <label for="attr_text_4"><span name="attr_label_4">attire</span></label>
+                <input type="text" id="attr_text_4" name="attr_text_4" />
             </div>
-            <div class="sheet-input">
-                <input type="hidden" name="attr_label_4" value="flaw" />
-                <label for="attr_value_4"><span name="attr_label_4">flaw</span></label>
-                <input type="text" class="sheet-open" id="attr_value_4" name="attr_value_4" />
+            <div class="input">
+                <input type="hidden" name="attr_label_5" value="flaw" />
+                <label for="attr_text_5"><span name="attr_label_5">flaw</span></label>
+                <input type="text" id="attr_text_5" name="attr_text_5" />
             </div>
-            <div class="sheet-input sheet-input-full">
+            <div class="input input-full">
                 <input type="hidden" name="attr_label_notes" value="notes" />
-                <label for="attr_notes"><span name="attr_label_notes">notes</span></label>
-                <textarea class="sheet-open" id="attr_notes" name="attr_notes"></textarea>
+                <label for="attr_text_notes"><span name="attr_label_notes">notes</span></label>
+                <textarea id="attr_text_notes" name="attr_text_notes"></textarea>
             </div>
         </div>
     </div>
 
-    <div class="sheet-stats">
-        <div class="sheet-stats-header">
+    <div class="stats">
+        <div class="stats-header">
             <label><span name="attr_primary_type">Bear</span></label>
             <label><span name="attr_secondary_type">Criminal</span></label>
-
-            <input type="hidden" name="attr_primary_modifier" value="Frustration" />
-            <input type="hidden" name="attr_secondary_modifier" value="Greed" />
         </div>
-        <div class="sheet-stat-control">
-            <button class="sheet-frustration" type="action" name="act_primary_modifier" title="%{primary_modifier} (+1 %{primary_type})">+</button>
-
+        <div class="stat-control">
             <input type="hidden" name="attr_is_primary_bear" value="1" />
             <input type="hidden" name="attr_primary" value="3" />
-            <img class="sheet-stat-primary" src="https://github.com/tysonmatanich/roll20-honey-heist/blob/main/assets/images/bear.png?raw=true" name="attr_primary_modifier" alt="@{primary_type}" />
-            <img class="sheet-stat-primary" src="https://github.com/tysonmatanich/roll20-honey-heist/blob/main/assets/images/bear.png?raw=true" name="attr_primary_modifier" alt="@{primary_type}" />
-            <img class="sheet-stat-primary" src="https://github.com/tysonmatanich/roll20-honey-heist/blob/main/assets/images/bear.png?raw=true" name="attr_primary_modifier" alt="@{primary_type}" />
-            <img class="sheet-stat-primary" src="https://github.com/tysonmatanich/roll20-honey-heist/blob/main/assets/images/bear.png?raw=true" name="attr_primary_modifier" alt="@{primary_type}" />
-            <img class="sheet-stat-primary" src="https://github.com/tysonmatanich/roll20-honey-heist/blob/main/assets/images/bear.png?raw=true" name="attr_primary_modifier" alt="@{primary_type}" />
-            <img class="sheet-stat-primary" src="https://github.com/tysonmatanich/roll20-honey-heist/blob/main/assets/images/bear.png?raw=true" name="attr_primary_modifier" alt="@{primary_type}" />
-
             <input type="hidden" name="attr_secondary" value="3" />
-            <img class="sheet-stat-secondary" src="https://github.com/tysonmatanich/roll20-honey-heist/blob/main/assets/images/criminal.png?raw=true" name="attr_secondary_type" alt="@{secondary_type}" />
-            <img class="sheet-stat-secondary" src="https://github.com/tysonmatanich/roll20-honey-heist/blob/main/assets/images/criminal.png?raw=true" name="attr_secondary_type" alt="@{secondary_type}" />
-            <img class="sheet-stat-secondary" src="https://github.com/tysonmatanich/roll20-honey-heist/blob/main/assets/images/criminal.png?raw=true" name="attr_secondary_type" alt="@{secondary_type}" />
-            <img class="sheet-stat-secondary" src="https://github.com/tysonmatanich/roll20-honey-heist/blob/main/assets/images/criminal.png?raw=true" name="attr_secondary_type" alt="@{secondary_type}" />
-            <img class="sheet-stat-secondary" src="https://github.com/tysonmatanich/roll20-honey-heist/blob/main/assets/images/criminal.png?raw=true" name="attr_secondary_type" alt="@{secondary_type}" />
-            <img class="sheet-stat-secondary" src="https://github.com/tysonmatanich/roll20-honey-heist/blob/main/assets/images/criminal.png?raw=true" name="attr_secondary_type" alt="@{secondary_type}" />
 
-            <button class="sheet-greed" type="action" name="attr_secondary_modifier" title="%{secondary_modifier} (+1 %{secondary_type})">+</button>
+            <button type="action" name="act_primary_modifier" title="+1 Primary">+</button>
+
+            <div class="stat-primary"></div>
+            <div class="stat-primary"></div>
+            <div class="stat-primary"></div>
+            <div class="stat-primary"></div>
+            <div class="stat-primary"></div>
+            <div class="stat-primary"></div>
+
+            <div class="stat-secondary"></div>
+            <div class="stat-secondary"></div>
+            <div class="stat-secondary"></div>
+            <div class="stat-secondary"></div>
+            <div class="stat-secondary"></div>
+            <div class="stat-secondary"></div>
+
+            <button type="action" name="act_secondary_modifier" title="+1 Secondary">+</button>
         </div>
-        <div class="sheet-roll-container">
-            <div class="sheet-roll-group">
-                <button type="roll" class="sheet-roll" title="Roll %{primary_type} (1d6)" name="roll_primary"
+        <div class="roll-container">
+            <div class="roll-group">
+                <button type="roll" class="button" title="Roll Primary (1d6)" name="roll_primary"
                     value="&{template:Skill} {{characterName=@{character_name}}} {{characterType=@{primary_type}}} {{isPrimary=[[1]]}} {{isPrimaryBear=[[@{is_primary_bear}]]}} {{diceRoll=[[1d6]]}} {{playerStat=[[@{primary}]]}}">
                     <span name="attr_primary_type">Bear</span>
                 </button>
-                <button type="roll" class="sheet-roll sheet-roll-special" title="Roll Special %{primary_type} (2d6)" name="roll_primary_advantage"
+                <button type="roll" class="button special" title="Roll Special Primary (2d6)" name="roll_primary_advantage"
                     value="&{template:Skill} {{characterName=@{character_name}}} {{characterType=@{primary_type}}} {{isPrimary=[[1]]}} {{isPrimaryBear=[[@{is_primary_bear}]]}} {{special=Special}} {{diceRoll=[[2d6kl1]]}} {{playerStat=[[@{primary}]]}}">
                     <span name="attr_primary_type">Bear</span> special
                 </button>
             </div>
-            <div class="sheet-roll-group">
-                <button type="roll" class="sheet-roll" title="Roll %{secondary_type} (1d6)" name="roll_secondary"
+            <div class="roll-group">
+                <button type="roll" class="button" title="Roll Secondary (1d6)" name="roll_secondary"
                     value="&{template:Skill} {{characterName=@{character_name}}} {{characterType=@{secondary_type}}} {{isSecondary=[[1]]}} {{isPrimaryBear=[[@{is_primary_bear}]]}} {{diceRoll=[[1d6]]}} {{playerStat=[[@{secondary}]]}}">
                     <span name="attr_secondary_type">Criminal</span>
                 </button>
-                <button type="roll" class="sheet-roll sheet-roll-special" title="Roll Special %{secondary_type} (2d6)" name="roll_secondary_advantage"
+                <button type="roll" class="button special" title="Roll Special Secondary (2d6)" name="roll_secondary_advantage"
                     value="&{template:Skill} {{characterName=@{character_name}}} {{characterType=@{secondary_type}}} {{isSecondary=[[1]]}} {{isPrimaryBear=[[@{is_primary_bear}]]}} {{special=Special}} {{diceRoll=[[2d6kl1]]}} {{playerStat=[[@{secondary}]]}}">
                     <span name="attr_secondary_type">Criminal</span> special
                 </button>
@@ -97,16 +92,16 @@
         <a href="#popup_rules">View Rules Summary</a>
     </div>
 
-    <div id="popup_rules" class="sheet-overlay">
-        <a class="sheet-overlay-background" href="#" title="Close Popup"></a>
-        <div class="sheet-popup sheet-rules">
+    <div id="popup_rules" class="popup-container">
+        <a class="background" href="#" title="Close Popup"></a>
+        <div class="popup rules">
             <header>
                 <h2>
                     Rules Summary
                 </h2>
-                <a class="sheet-overlay-close" href="#" title="Close Popup">×</a>
+                <a class="popup-close" href="#" title="Close Popup">×</a>
             </header>
-            <div class="sheet-overlay-content">
+            <div class="content">
                 <p>You’re not a talking bear, per se, but you can sort of mangle human speech through your bear mouth, maybe?</p>
                 <h3>Stats</h3>
                 <p>You have two stats. Each starts with 3 points.</p>
@@ -131,10 +126,10 @@
 <script type="text/worker">
 const isValidStats = function (primary, secondary) {
   return (
-    primary + secondary === 6 ||
-    primary >= 0 ||
-    primary <= 6 ||
-    secondary >= 0 ||
+    primary + secondary == 6 &&
+    primary >= 0 &&
+    primary <= 6 &&
+    secondary >= 0 &&
     secondary <= 6
   );
 };
@@ -172,7 +167,7 @@ const updateIsPrimaryBear = function () {
   getAttrs(["primary_type"], function (values) {
     if (
       values.primary_type &&
-      values.primary_type.trim().toLowerCase() === "bear"
+      values.primary_type.trim().toLowerCase() == "bear"
     ) {
       setAttrs({
         is_primary_bear: 1,
@@ -186,14 +181,14 @@ const updateIsPrimaryBear = function () {
 };
 
 on("sheet:opened", function () {
-  if (
-    !isValidStats(parseInt(values.primary), parseInt(values.secondary))
-  ) {
-    setAttrs({
-      primary: 3,
-      secondary: 3,
-    });
-  }
+  getAttrs(["primary", "secondary"], function (values) {
+    if (!isValidStats(parseInt(values.primary), parseInt(values.secondary))) {
+      setAttrs({
+        primary: 3,
+        secondary: 3,
+      });
+    }
+  });
   updateIsPrimaryBear();
 });
 
@@ -240,11 +235,19 @@ on("change:primary_type", function () {
 
     {{#rollTotal() isPrimaryBear 1}}
       {{#isPrimary}}
+        <div class="sheet-primary sheet-is-bear"></div>
+      {{/isPrimary}}
+      {{#isSecondary}}
+        <div class="sheet-secondary sheet-is-bear"></div>
+      {{/isSecondary}}
+    {{/rollTotal() isPrimaryBear 1}}
+    {{#rollTotal() isPrimaryBear 0}}
+      {{#isPrimary}}
         <div class="sheet-primary"></div>
       {{/isPrimary}}
       {{#isSecondary}}
         <div class="sheet-secondary"></div>
       {{/isSecondary}}
-    {{/rollTotal() isPrimaryBear 1}}
+    {{/rollTotal() isPrimaryBear 0}}
   </div>
 </rolltemplate>

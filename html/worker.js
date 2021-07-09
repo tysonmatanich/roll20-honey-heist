@@ -1,9 +1,9 @@
 const isValidStats = function (primary, secondary) {
   return (
-    primary + secondary === 6 ||
-    primary >= 0 ||
-    primary <= 6 ||
-    secondary >= 0 ||
+    primary + secondary == 6 &&
+    primary >= 0 &&
+    primary <= 6 &&
+    secondary >= 0 &&
     secondary <= 6
   );
 };
@@ -41,7 +41,7 @@ const updateIsPrimaryBear = function () {
   getAttrs(["primary_type"], function (values) {
     if (
       values.primary_type &&
-      values.primary_type.trim().toLowerCase() === "bear"
+      values.primary_type.trim().toLowerCase() == "bear"
     ) {
       setAttrs({
         is_primary_bear: 1,
@@ -55,14 +55,14 @@ const updateIsPrimaryBear = function () {
 };
 
 on("sheet:opened", function () {
-  if (
-    !isValidStats(parseInt(values.primary), parseInt(values.secondary))
-  ) {
-    setAttrs({
-      primary: 3,
-      secondary: 3,
-    });
-  }
+  getAttrs(["primary", "secondary"], function (values) {
+    if (!isValidStats(parseInt(values.primary), parseInt(values.secondary))) {
+      setAttrs({
+        primary: 3,
+        secondary: 3,
+      });
+    }
+  });
   updateIsPrimaryBear();
 });
 
